@@ -6,6 +6,16 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 99c9720ab356a0642a771bea13969a05
-  m_configObjects: {}
+    path: Assets/Scenes/SelectDeviceScene.unity
+    guid: 993f756e3cf972b4084b987f8971e31f
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 18d149c4e7dfc76439861d5eb2051c72
+  - enabled: 1
+    path: Assets/Scenes/MultiplayerRoom.unity
+    guid: 91a4308457ab4224fb50864b572ea818
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80338f8eb2296c5428c459053449ea2d,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: bb025ff1777be5240b11c4d6c3bbd32a,
+      type: 2}
