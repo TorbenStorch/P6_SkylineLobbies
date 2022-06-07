@@ -267,7 +267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3b4592a5d5fc0429790055e1c6eec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabCAVE: {fileID: 4340825137190583384, guid: e6672712dfc86304b97529acbe81118c,
+  prefabCAVE: {fileID: 2310155101675300412, guid: 5f1b5197d571c3145bbbb3767b07f5d7,
     type: 3}
   prefabHMD: {fileID: 1389893002896051346, guid: ee460c5afe9529d4c88ba16bad0d2387,
     type: 3}

@@ -7,7 +7,7 @@ public class SelectDevice : MonoBehaviour
 {
 	public enum avaliableScenes //add the scene names
 	{
-		SelectDeviceScene, MainMenu, MultiplayerRoom
+		SelectDeviceScene, MainMenu, MultiplayerRoom, MapScene_CAVE
 	}
 	public avaliableScenes sceneToLoad;
 
