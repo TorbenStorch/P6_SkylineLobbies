@@ -5,21 +5,15 @@ using UnityEngine;
 
 public class SelectDevice : MonoBehaviour
 {
-	public enum avaliableScenes //add the scene names
+	public enum deviceTypeEnum //add the scene names
 	{
-		SelectDeviceScene, MainMenu, MultiplayerRoom, MapScene_CAVE
+		CAVE, HMD, PROJECTOR
 	}
-	public avaliableScenes sceneToLoad;
-
-
+	public deviceTypeEnum deviceTypeOptions;
 
 	public static string deviceType;
-	public void DeviceType(string selectedDeviceType)
+	public void Start()
 	{
-		if (selectedDeviceType == "CAVE" || selectedDeviceType == "PROJECTOR" || selectedDeviceType == "HMD")
-		{
-			deviceType = selectedDeviceType; //set the static string to the selectedDeviceType (CAVE or PROJECTOR or HMD)
-			SceneManager.LoadScene(sceneToLoad.ToString());
-		}
+		deviceType = deviceTypeOptions.ToString();
 	}
 }

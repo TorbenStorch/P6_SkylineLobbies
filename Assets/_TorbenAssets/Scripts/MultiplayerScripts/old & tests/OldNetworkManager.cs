@@ -11,7 +11,7 @@ using Photon.Realtime;
 //using UnityEngine.SceneManagement;
 
 
-public sealed class MyNetworkManager : MonoBehaviourPunCallbacks
+public sealed class OldNetworkManager : MonoBehaviourPunCallbacks
 {
 	public enum avaliableScenes //add the scene names
 	{
@@ -22,7 +22,7 @@ public sealed class MyNetworkManager : MonoBehaviourPunCallbacks
 
 	#region Singleton
 
-	public static MyNetworkManager Instance { set; get; }
+	public static OldNetworkManager Instance { set; get; }
 
 	void Awake()
 	{
@@ -37,12 +37,6 @@ public sealed class MyNetworkManager : MonoBehaviourPunCallbacks
 	#endregion
 
 	#region Connect to Server and join Lobby
-	//void Start()
-	//   {
-	//       Debug.Log("Try to Connect to Server");
-	//       PhotonNetwork.ConnectUsingSettings(); //Connect to server
-	//   }
-
 	public void StartConnectServer() //Connect to server (own function that is called by the MenuManager)
 	{
 		Debug.Log("Try to Connect to Server");
