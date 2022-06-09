@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Bubble
+  - Bubble2
+  - Bubble3
+  - Ball
+  - Ball2
+  - Ball3
   layers:
   - Default
   - TransparentFX
