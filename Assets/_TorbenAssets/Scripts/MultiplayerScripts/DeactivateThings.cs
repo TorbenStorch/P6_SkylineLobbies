@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Unity.XR.CoreUtils;
+using UnityEngine.InputSystem.XR;
 
 [RequireComponent(typeof(PhotonView))]
 public class DeactivateThings : MonoBehaviour
@@ -15,6 +16,8 @@ public class DeactivateThings : MonoBehaviour
 	[SerializeField] AudioListener audioListenerToTurnOff;
 
 	[SerializeField] bool deactavateXROrigin;
+
+	[SerializeField] TrackedPoseDriver trackedPoseDriver;
 
 	//GameObject hmdObjectToDeactivate;
 	XROrigin origin;
@@ -36,7 +39,8 @@ public class DeactivateThings : MonoBehaviour
 
 			if (audioListenerToTurnOff != null)
 				audioListenerToTurnOff.enabled = false;
-
+			if (trackedPoseDriver != null)
+				trackedPoseDriver.enabled = false;
 			if (deactavateXROrigin)
 			{
 				origin = GetComponent<XROrigin>();
