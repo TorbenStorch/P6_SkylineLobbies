@@ -14,10 +14,10 @@ public class StickyNote : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private bool _swipeLeft;
 
     [SerializeField]
-    private GameObject StickyNotePanel;
+    private GameObject TableStickyNotePanel;
 
     [SerializeField]
-    private GameObject RightDisplayCanvas;
+    private GameObject WhiteboardCanvas;
    
 
 
@@ -78,10 +78,10 @@ public class StickyNote : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
     private void MovedNote()
     {
 
-        transform.SetParent(RightDisplayCanvas.transform);
+        transform.SetParent(WhiteboardCanvas.transform);
 
-        float canvasHeight = RightDisplayCanvas.GetComponent<RectTransform>().rect.height;
-        float canvasWidth = RightDisplayCanvas.GetComponent<RectTransform>().rect.width;
+        float canvasHeight = WhiteboardCanvas.GetComponent<RectTransform>().rect.height;
+        float canvasWidth = WhiteboardCanvas.GetComponent<RectTransform>().rect.width;
 
 
         float stickyNoteHeight = this.gameObject.GetComponent<RectTransform>().rect.height;
@@ -91,12 +91,10 @@ public class StickyNote : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDr
                                                 Random.Range(0 + stickyNoteHeight, canvasHeight - stickyNoteHeight));
 
         Debug.LogWarning(transform.rotation + " transformed the rotation BEFORE");
-
         transform.localPosition = randomCanvasPos;
 
 
-        transform.localRotation = RightDisplayCanvas.transform.rotation;
-
+        transform.localRotation = WhiteboardCanvas.transform.localRotation;
         Debug.LogWarning(transform.rotation + " transformed the rotation´AFTER ");
 
 
