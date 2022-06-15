@@ -1,7 +1,13 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 09-06-2022
+Topic: Script that Manages/Calls the connection to Server/Lobby & joining/creating specific rooms
+Note: Middleman between UI Buttons and the NetworkManager -> needs NetworkManager in same Scene
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
 
 public class MenuManager : MonoBehaviour
 {

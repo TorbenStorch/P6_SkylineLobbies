@@ -1,7 +1,10 @@
-//////////////////////////////////////////////////////////////////////////////////////
-//Torben Storch - Photon Network script (connect to server, join or create a room)
-//////////////////////////////////////////////////////////////////////////////////////
-
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 09-06-2022
+Topic: Photon Network script (connect to server & lobby, joining/createing a room) -> atm the Functions will be called by the MenuManager
+Note: Includes an event that is called when we joined the lobby/can join rooms
+---------------------------------------------------------*/
 using System;
 using UnityEngine;
 using Photon.Pun;
@@ -61,7 +64,7 @@ public sealed class NetworkManager : MonoBehaviourPunCallbacks
 			PublishUserId = true
 		};
 		Debug.Log("Room: '" + roomName + "' was created/joined");
-		PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default); 
+		PhotonNetwork.JoinOrCreateRoom(roomName, roomOptions, TypedLobby.Default);
 	}
 	#endregion
 

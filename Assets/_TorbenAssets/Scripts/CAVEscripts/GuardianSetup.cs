@@ -1,53 +1,47 @@
-﻿using System.Collections;
+﻿/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 09-06-2022
+Topic: Script for Cube-Shaped-CAVE-Guardian setup
+---------------------------------------------------------*/
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class GuardianSetup : MonoBehaviour //currently only for one tracker - needs more later on
+public class GuardianSetup : MonoBehaviour //currently only for one tracker (maybe needs more later on)
 {
+	#region Data
 	//Position
 	Vector3 centerPosition;
 	Vector3 leftBorder, frontBorder, rightBorder, bufferBorder;
 	int state = 0;
-	public int secondsToWaitForCalibration;
+	[SerializeField] int secondsToWaitForCalibration;
 	bool guardianSet;
-	//float guardianShowStartProcentage = 0.7f; //needs change maybe - depending on number the distanbce can be bigger/smaller tzhen the other borderstartpoints
 	float bufferBorderDifference;
 	float frontBorderStart, leftBorderStart, rightBorderStart;
 	bool buttonPressedFlag = false;
 
-
-
-
-
 	//Color
 	Color near = new Color(1, 0, 0, 1);
 	Color far = new Color(0, 0, 0, 0);
-	//float maxDistance = 99900;
 	Color borderColorLeft, borderColorFront, borderColorRight;
 	public GameObject borderObjLeft, borderObjFront, borderObjRight;
+	#endregion
 
-	private void Start()
+	#region Default Border & Update
+	void Start()
 	{
-		defaultBorders();
+		DefaultBorders();
 	}
-	private void Update()
+	void Update()
 	{
-		setGuardian();
-		//setColor();
-		if (guardianSet)
-		{
-			bufferBorderDifference = rightBorder.x - bufferBorder.x;
-
-			frontBorderStart = frontBorder.z - bufferBorderDifference;
-			leftBorderStart = leftBorder.x + bufferBorderDifference;
-			rightBorderStart = rightBorder.x - bufferBorderDifference;
-		}
-		calculateAlpha();
-		setColorForBorder();
+		SetGuardian();
+		CalculateAlpha();
+		SetColorForBorder();
 	}
 
-	void defaultBorders()
+	void DefaultBorders()
 	{
 		centerPosition = this.transform.position;
 		leftBorder = new Vector3(-10, 0, 0);
@@ -63,14 +57,17 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 		borderObjFront.GetComponent<Renderer>().material.color = far;
 		borderObjRight.GetComponent<Renderer>().material.color = far;
 	}
+	#endregion
 
 	#region SetGuardian
-	void setGuardian()
+
+	//Press Space and position the Tracker where the border should be set (1. Center | 2. Left | 3. Front | 4. Right | 5. Bufferzone from right side)
+	void SetGuardian()
 	{
-		if (Input.GetKeyDown(KeyCode.Space) && !guardianSet && !buttonPressedFlag /*&& Keyboard.current[Key.Space].wasPressedThisFrame*/)
+		if (Input.GetKeyDown(KeyCode.Space) && !guardianSet && !buttonPressedFlag) //set the guardian if it was not set & prevent button spamming 
 		{
 			buttonPressedFlag = true;
-			StartCoroutine(setPostitons(state));
+			StartCoroutine(SetPostitons(state));
 			switch (state)
 			{
 				case 0:
@@ -98,14 +95,14 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 			Debug.Log("GUARDIAN RESET");
 			guardianSet = false;
 			state = 0;
-			defaultBorders();
+			DefaultBorders();
 		}
 	}
-	IEnumerator setPostitons(int currentState)
+	IEnumerator SetPostitons(int currentState)
 	{
 		yield return new WaitForSeconds(secondsToWaitForCalibration);
 		buttonPressedFlag = false;
-		switch (currentState)
+		switch (currentState) //set the center & border positions to the point where the tracker is after the delay
 		{
 			case 0:
 				centerPosition = transform.position;
@@ -127,6 +124,12 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 				bufferBorder = transform.position;
 				Debug.Log("buffer_Pos:" + bufferBorder);
 				guardianSet = true;
+
+				//Set Buffer
+				bufferBorderDifference = rightBorder.x - bufferBorder.x;
+				frontBorderStart = frontBorder.z - bufferBorderDifference;
+				leftBorderStart = leftBorder.x + bufferBorderDifference;
+				rightBorderStart = rightBorder.x - bufferBorderDifference;
 				break;
 
 
@@ -137,54 +140,12 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 	}
 	#endregion
 
-
 	#region CheckDistance
-	//void setColor()
-	//{
-	//	maxDistance = ((Vector3.Distance(centerPosition, frontBorder) + Vector3.Distance(centerPosition, leftBorder) + Vector3.Distance(centerPosition, rightBorder)) / 3) * 100;
-	//	calculateColor(leftBorder);
-	//	calculateColor(frontBorder);
-	//	calculateColor(rightBorder);
-	//
-	//
-	//}
-	//void calculateColor(Vector3 objectForDistance)
-	//{
-	//	float distanceApart = getSqrDistance(transform.position, objectForDistance);
-	//	//Debug.Log(getSqrDistance(transform.position, objectForDistance));
-	//	float lerp = mapValue(distanceApart, 0, maxDistance, 0f, 1f);
-	//	Color lerpColor = Color.Lerp(near, far, lerp);
-	//	if (objectForDistance == leftBorder)
-	//	{
-	//		borderColorLeft = lerpColor;
-	//		if (lerpColor.r != 0)
-	//		{
-	//			//Debug.LogWarning("CLOSE LEFT");
-	//		}
-	//	}
-	//	else if (objectForDistance == frontBorder)
-	//	{
-	//		borderColorFront = lerpColor;
-	//	}
-	//	else if (objectForDistance == rightBorder)
-	//	{
-	//		borderColorRight = lerpColor;
-	//	}
-	//	//borderColorRight = objectForDistance == rightBorder ? lerpColor : Color.red;
-	//	Debug.Log(lerpColor);
-	//
-	//	//GetComponent<Renderer>().material.color = lerpColor;
-	//}
-	//public float getSqrDistance(Vector3 v1, Vector3 v2)
-	//{
-	//	return (v1 - v2).sqrMagnitude;
-	//}
-
-	void calculateAlpha()
+	void CalculateAlpha() //set the color of the corresponding border to a lerp from near to far color
 	{
 		if (transform.position.x <= leftBorderStart)
 		{
-			float lerp = mapValue(transform.position.x, leftBorder.x, leftBorderStart, 0f, 1f);
+			float lerp = MapValue(transform.position.x, leftBorder.x, leftBorderStart, 0f, 1f);
 			Color lerpColor = Color.Lerp(near, far, lerp);
 			Debug.LogWarning("LEFT");
 			borderColorLeft = lerpColor;
@@ -195,7 +156,7 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 		}
 		if (transform.position.x >= rightBorderStart)
 		{
-			float lerp = mapValue(transform.position.x, rightBorder.x, rightBorderStart, 0f, 1f);
+			float lerp = MapValue(transform.position.x, rightBorder.x, rightBorderStart, 0f, 1f);
 			Color lerpColor = Color.Lerp(near, far, lerp);
 			Debug.LogWarning("RIGHT");
 			borderColorRight = lerpColor;
@@ -206,7 +167,7 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 		}
 		if (transform.position.z >= frontBorderStart)
 		{
-			float lerp = mapValue(transform.position.z, frontBorder.z, frontBorderStart, 0f, 1f);
+			float lerp = MapValue(transform.position.z, frontBorder.z, frontBorderStart, 0f, 1f);
 			Color lerpColor = Color.Lerp(near, far, lerp);
 			Debug.LogWarning("FRONT");
 			borderColorFront = lerpColor;
@@ -217,7 +178,7 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 		}
 	}
 
-	void setColorForBorder()
+	void SetColorForBorder()
 	{
 		if (guardianSet)
 		{
@@ -227,14 +188,13 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 		}
 	}
 
-
-
-	float mapValue(float mainValue, float inValueMin, float inValueMax, float outValueMin, float outValueMax)
+	// TrackerPos, borderPos, borderPos+buffer, colorIntesity 0, colorIntesity 1 
+	float MapValue(float mainValue, float inValueMin, float inValueMax, float outValueMin, float outValueMax)
 	{
 		return (mainValue - inValueMin) * (outValueMax - outValueMin) / (inValueMax - inValueMin) + outValueMin;
 	}
 
-	void OnDrawGizmos()
+	void OnDrawGizmos() //just for Scene debugging
 	{
 		Gizmos.color = borderColorLeft;
 		Gizmos.DrawLine(transform.position, leftBorder);
@@ -255,3 +215,4 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker - ne
 	}
 	#endregion
 }
+
