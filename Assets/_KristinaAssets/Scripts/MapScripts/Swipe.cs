@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
+public class Swipe : MonoBehaviour
 {
 
     private Vector3 _initialPosition;
@@ -14,9 +14,9 @@ public class Swipe : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHan
    
 
 
-    public void OnDrag(PointerEventData eventData)
+    public void OnDrag(Vector2 mousePos)
     {
-        transform.localPosition = new Vector2(transform.localPosition.x + eventData.delta.x, transform.localPosition.y);
+        transform.localPosition = new Vector2(transform.localPosition.x + mousePos.x, transform.localPosition.y);
         
         //check if current pos is on the left or on the right of the initial pos   
         if(transform.localPosition.x - _initialPosition.x > 0) //if right from center
