@@ -47,15 +47,33 @@ public class MainMenuManager : MonoBehaviour
     //----more----//
 
 
+    public void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            switchToSofia();
+        }
+        else if (Input.GetKeyDown(KeyCode.R))
+        {
+            Refresh();
+        }
+        else if (Input.GetKeyDown(KeyCode.M))
+        {
+            switchToMap();
+        }
+
+    }
 
 
     public void switchToSofia()
     {
-        mapPanel.SetActive(false);
-        sofiaPanel.SetActive(true);
 
-        currentActivePanel = sofiaPanel;
-        isCampusPanelActive = true;
+            mapPanel.SetActive(false);
+            sofiaPanel.SetActive(true);
+
+            currentActivePanel = sofiaPanel;
+            isCampusPanelActive = true;
+        
 
     }
 
@@ -92,11 +110,15 @@ public class MainMenuManager : MonoBehaviour
 
     public void switchToMap()
     {
-        currentActivePanel.SetActive(false);
-        
-        isCampusPanelActive = false;
 
-        mapPanel.SetActive(true);
+            currentActivePanel.SetActive(false);
+
+            isCampusPanelActive = false;
+
+            mapPanel.SetActive(true);
+        
+
+        
     }
 
 
@@ -122,14 +144,16 @@ public class MainMenuManager : MonoBehaviour
     {
 
         //----Sofia----//
-        foreach (GameObject card in sofiaProjectCards)
-        {
-            card.SetActive(true);
-            card.transform.localPosition = new Vector2(0, 0);
-            card.transform.localEulerAngles = new Vector3(0, 0, 0);
-            
-            card.GetComponent<Image>().color = new Color(255, 255, 255, 1);
-        }
+        
+            foreach (GameObject card in sofiaProjectCards)
+            {
+                card.SetActive(true);
+                card.transform.localPosition = new Vector2(0, 0);
+                card.transform.localEulerAngles = new Vector3(0, 0, 0);
+
+                card.GetComponent<Image>().color = new Color(255, 255, 255, 1);
+            }
+        
 
 
         //----Cluj----//

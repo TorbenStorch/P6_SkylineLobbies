@@ -11,7 +11,6 @@ public class Swipe : MonoBehaviour
     private float _distanceMoved;
     private bool _swipeLeft;
 
-   
 
 
     public void OnDrag(Vector2 mousePos)

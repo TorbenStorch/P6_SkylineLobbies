@@ -154,6 +154,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   activateButtons:
   - {fileID: 1330158288}
+  projectToJoinScriptable: {fileID: 11400000, guid: bf93c9d25d71e8f489f543932454359c,
+    type: 2}
 --- !u!4 &86295889
 Transform:
   m_ObjectHideFlags: 0

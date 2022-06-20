@@ -6,6 +6,8 @@ using UnityEngine;
 public class MenuManager : MonoBehaviour
 {
 	public GameObject[] activateButtons; //those buttons should only be used when we joined the server & lobby
+	public ProjectScriptableObjectScript projectToJoinScriptable;
+
 
 	#region Join Server & Lobby
 	private void Start()
@@ -32,13 +34,29 @@ public class MenuManager : MonoBehaviour
 	}
 	#endregion
 
+	
+	/*
+	public void Update()
+	{
+		if (Input.GetKeyDown(KeyCode.J))
+		{
+			CreateOrJoinSpecificRoom(projectToJoinScriptable);
+		}
+		
+
+	}
+	*/
+
 	//will be called by a buttonOnClick event (just drag the ProjectScriptableObject into the slot to send over name and scene.name)
 	public void CreateOrJoinSpecificRoom(ProjectScriptableObjectScript projectToJoin) //connection to the Project Scriptable Obj (has info about name & scene of projects)
 	{
-		if (projectToJoin != null)
-		{
-			NetworkManager.Instance.CreateOrJoinSpecificRoom(projectToJoin.projectName, projectToJoin.sceneToLoadWhenJoinedProject.ToString());
-		}
+
+			if (projectToJoin != null)
+			{
+				NetworkManager.Instance.CreateOrJoinSpecificRoom(projectToJoin.projectName, projectToJoin.sceneToLoadWhenJoinedProject.ToString());
+			}
+
+		
 	}
 	public void ExitGame()
 	{
