@@ -1,3 +1,10 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 09-06-2022
+Topic: Script for VR Hand Andimations
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

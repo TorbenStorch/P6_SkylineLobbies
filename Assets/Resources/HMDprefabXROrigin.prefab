@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb48b9f9424184b4689a2f7ddcfe0921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  camera: {fileID: 1389893002601636612}
+  vrCamera: {fileID: 1389893002601636612}
   photonView: {fileID: -8418562844881325941}
 --- !u!1 &5703823502075331552
 GameObject:

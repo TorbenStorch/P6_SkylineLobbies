@@ -1,3 +1,9 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 09-06-2022
+Topic: Script to Instantiate the players accordingly to their SelectDevice.deviceType
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,7 +44,7 @@ public class RoomManager : MonoBehaviourPunCallbacks //Spawn the prefabs
 	{
 		SceneManager.sceneLoaded -= OnSceneLoad;
 	}
-	#endregion  
+	#endregion
 
 	private void OnSceneLoad(Scene scene, LoadSceneMode mode)
 	{
