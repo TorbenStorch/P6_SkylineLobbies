@@ -35,7 +35,6 @@ public class MenuManager : MonoBehaviour
 	#endregion
 
 	
-	/*
 	public void Update()
 	{
 		if (Input.GetKeyDown(KeyCode.J))
@@ -45,7 +44,7 @@ public class MenuManager : MonoBehaviour
 		
 
 	}
-	*/
+	
 
 	//will be called by a buttonOnClick event (just drag the ProjectScriptableObject into the slot to send over name and scene.name)
 	public void CreateOrJoinSpecificRoom(ProjectScriptableObjectScript projectToJoin) //connection to the Project Scriptable Obj (has info about name & scene of projects)
