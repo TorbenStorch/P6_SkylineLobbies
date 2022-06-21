@@ -28,12 +28,13 @@ public class SetUniBackground : MonoBehaviour
 
         //get the sphere's renderer component on start
         Renderer m_Renderer = gameObjectSphere.GetComponent<Renderer>();
-        m_mat = gameObjectSphere.GetComponent<MeshRenderer>().material;
+        m_mat = gameObjectSphere.GetComponent<Renderer>().material;
         //set the material on start
 
         //m_mat.SetTexture("_MainTex", m_MapTexture);
         //set the material's texture on start
         SetMapTexture();
+        Debug.Log("map texture is set to MAP on START");
 
     }
 
@@ -45,7 +46,8 @@ public class SetUniBackground : MonoBehaviour
     public void SetMapTexture()
     {
 
-        m_mat.SetTexture("_MainTex", m_MainTexture);
+        m_mat.SetTexture("_BaseMap", m_MainTexture);
+        Debug.Log("map texture is set back to MAP");
 
     }
 
@@ -53,14 +55,16 @@ public class SetUniBackground : MonoBehaviour
     public void SetSofiaTexture()
     {
 
-        m_mat.SetTexture("_MainTex", m_SofiaTexture);
+        m_mat.SetTexture("_BaseMap", m_SofiaTexture);
+        Debug.Log("map texture is set to SOFIA");
 
     }
 
     public void SetClujTexture()
     {
 
-        m_mat.SetTexture("_MainTex", m_ClujNapocaTexture);
+        m_mat.SetTexture("_BaseMap", m_ClujNapocaTexture);
+        Debug.Log("map texture is set to CLUJ");
 
     }
 

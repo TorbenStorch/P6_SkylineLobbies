@@ -2056,6 +2056,7 @@ GameObject:
   - component: {fileID: 2032316679}
   - component: {fileID: 2032316678}
   - component: {fileID: 2032316682}
+  - component: {fileID: 2032316683}
   m_Layer: 0
   m_Name: Sphere_BG
   m_TagString: Untagged
@@ -2153,6 +2154,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0445727ce93802145a11764cdb62547e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2032316683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032316676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b4a2a407f646344a16816b2100a995, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameObjectSphere: {fileID: 2032316676}
+  m_mat: {fileID: 2100000, guid: 746519199ae596f479aa06674d2f53b8, type: 2}
+  m_MainTexture: {fileID: 2800000, guid: cde49b4b9958d2547a4fc5e9851a09fa, type: 3}
+  m_SofiaTexture: {fileID: 2800000, guid: f9b51be275a03c44ba8aa31aad9a5935, type: 3}
+  m_ClujNapocaTexture: {fileID: 2800000, guid: 4a59a4fee28965e4e9bd04d93fc9247d, type: 3}
 --- !u!1 &2034363695
 GameObject:
   m_ObjectHideFlags: 0
@@ -2384,7 +2402,6 @@ GameObject:
   - component: {fileID: 1048919511690368653}
   - component: {fileID: 1048919511690368654}
   - component: {fileID: 1048919511690368655}
-  - component: {fileID: 1048919511690368656}
   m_Layer: 0
   m_Name: MenuManager
   m_TagString: Untagged
@@ -2465,23 +2482,6 @@ MonoBehaviour:
   cyprusProjectCards: []
   darmstadtPanel: {fileID: 0}
   darmstadtProjectCards: []
---- !u!114 &1048919511690368656
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1048919511690368650}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a5b4a2a407f646344a16816b2100a995, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameObjectSphere: {fileID: 2032316676}
-  m_mat: {fileID: 2100000, guid: 746519199ae596f479aa06674d2f53b8, type: 2}
-  m_MapTexture: {fileID: 2800000, guid: cde49b4b9958d2547a4fc5e9851a09fa, type: 3}
-  m_SofiaTexture: {fileID: 2800000, guid: f9b51be275a03c44ba8aa31aad9a5935, type: 3}
-  m_ClujNapocaTexture: {fileID: 2800000, guid: 4a59a4fee28965e4e9bd04d93fc9247d, type: 3}
 --- !u!1 &1048919512901390642
 GameObject:
   m_ObjectHideFlags: 0
@@ -2701,9 +2701,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 2032316683}
         m_TargetAssemblyTypeName: SetUniBackground, Assembly-CSharp
-        m_MethodName: SwitchMatCluj
+        m_MethodName: SetClujTexture
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5315,9 +5315,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1048919511690368655}
+        m_TargetAssemblyTypeName: MainMenuManager, Assembly-CSharp
+        m_MethodName: switchToMap
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2032316683}
         m_TargetAssemblyTypeName: SetUniBackground, Assembly-CSharp
-        m_MethodName: SwitchMatMap
+        m_MethodName: SetMapTexture
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5483,7 +5495,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1048919511690368656}
+      - m_Target: {fileID: 2032316683}
         m_TargetAssemblyTypeName: SetUniBackground, Assembly-CSharp
         m_MethodName: SetSofiaTexture
         m_Mode: 1
@@ -8313,7 +8325,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1048919511690368656}
+      - m_Target: {fileID: 2032316683}
         m_TargetAssemblyTypeName: SetUniBackground, Assembly-CSharp
         m_MethodName: SetMapTexture
         m_Mode: 1
