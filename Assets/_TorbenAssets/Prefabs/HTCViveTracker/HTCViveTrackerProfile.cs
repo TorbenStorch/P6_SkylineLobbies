@@ -253,6 +253,16 @@ namespace UnityEngine.XR.OpenXR.Features.Interactions
         /// <inheritdoc/>
         protected override void RegisterActionMapsWithRuntime()
         {
+			if (!FindObjectOfType<ActivateCameras>(false))
+			{
+                Debug.Log("Unregistering Vive Tracker");
+                UnregisterDeviceLayout();
+                return;
+            }
+			
+
+
+
             ActionMapConfig actionMap = new ActionMapConfig()
             {
                 name = "htcvivetracker",
