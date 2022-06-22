@@ -2,7 +2,7 @@
 Creator: Torben Storch
 Expanded Realities P6
 last change: 21-06-2022
-Topic: Teleportation Locomotion Script
+Topic: Teleportation Locomotion Script v01
 ---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;

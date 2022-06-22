@@ -525,7 +525,7 @@
                     "name": "",
                     "id": "8da6ed3a-f621-49fe-8c76-1f6b7d7754d6",
                     "path": "<XRController>{LeftHand}/Primary2DAxis",
-                    "interactions": "Sector(directions=-1)",
+                    "interactions": "Sector(directions=1)",
                     "processors": "",
                     "groups": "Noncontinuous Move",
                     "action": "Teleport Mode Activate",
@@ -1069,6 +1069,17 @@
                     "processors": "",
                     "groups": "Generic XR Controller",
                     "action": "Turn",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5a2f9ac5-8b56-480d-b221-d54862e984ad",
+                    "path": "<XRController>{RightHand}/primary2DAxis",
+                    "interactions": "",
+                    "processors": "StickDeadzone",
+                    "groups": "Continuous Move",
+                    "action": "Move",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

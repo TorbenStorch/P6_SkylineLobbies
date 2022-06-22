@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 09-06-2022
+last change: 22-06-2022
 Topic: Script that Manages/Calls the connection to Server/Lobby & joining/creating specific rooms
 Note: Middleman between UI Buttons and the NetworkManager -> needs NetworkManager in same Scene
 ---------------------------------------------------------*/
@@ -25,6 +25,10 @@ public class MenuManager : MonoBehaviour
 			}
 		FindObjectOfType<NetworkManager>().connectedToLobbyEvent += ConnectedToServerAndLobby; //connect to the event (when joined server&lobby) as listener
 		ConnectToServer(); // we want to automaticly join the server & lobby -> therefore in start instead of calling it via button
+	}
+	private void OnDestroy() //prevents possible problems (always unsubscribe from delegates if destroyed)
+	{
+		FindObjectOfType<NetworkManager>().connectedToLobbyEvent -= ConnectedToServerAndLobby;
 	}
 	void ConnectToServer()
 	{
