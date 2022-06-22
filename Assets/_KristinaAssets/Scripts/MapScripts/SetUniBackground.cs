@@ -3,6 +3,11 @@ using UnityEngine;
 public class SetUniBackground : MonoBehaviour
 {
 
+
+
+    [SerializeField]
+    private GameObject sofia3DMap;
+
     //drag and drop the gameObject sphere in the inspector
     //(the sphere that encapsulates the cameras, we use it as a background by having the FlippedNormals script on it too)
     [SerializeField]
@@ -49,6 +54,8 @@ public class SetUniBackground : MonoBehaviour
         m_mat.SetTexture("_BaseMap", m_MainTexture);
         Debug.Log("map texture is set back to MAP");
 
+        sofia3DMap.SetActive(false);
+
     }
 
 
@@ -69,5 +76,14 @@ public class SetUniBackground : MonoBehaviour
     }
 
 
+
+
+    public void SetSofia3DActive()
+    {
+
+        sofia3DMap.SetActive(true);
+        Debug.Log("map texture is set to CLUJ");
+
+    }
 
 }
