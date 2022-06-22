@@ -253,16 +253,15 @@ namespace UnityEngine.XR.OpenXR.Features.Interactions
         /// <inheritdoc/>
         protected override void RegisterActionMapsWithRuntime()
         {
-			if (!FindObjectOfType<ActivateCameras>(false))
+            //ActivateCameras exists only on the CAVE side not VR
+            if (!FindObjectOfType<ActivateCameras>(false)) 
 			{
                 Debug.Log("Unregistering Vive Tracker");
-                UnregisterDeviceLayout();
+                //Unregister the Layout so that VR-Inputs function
+                UnregisterDeviceLayout(); 
                 return;
             }
 			
-
-
-
             ActionMapConfig actionMap = new ActionMapConfig()
             {
                 name = "htcvivetracker",
