@@ -43,8 +43,8 @@ public class TeleportationController: MonoBehaviour
 
     //Stores Action for Teleport Mode Cancel
     private InputAction _teleportCancel;
-  
 
+    [SerializeField] private LayerMask teleportLayer;
     void Start()
     {
         //We don't want the rayInteractor to on unless we're using the forward press on the thumbstick so we deactivate it here
