@@ -15,7 +15,7 @@ public class Graber : MonoBehaviour
                 RaycastHit hit = CastRay();
                 if(hit.collider != null)
                 {
-                    if(!hit.collider.CompareTag("Untagged"))
+                    if(!hit.collider.CompareTag("Interactable"))
                     {
                         return;
                     }

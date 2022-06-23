@@ -1,60 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class InstantiationManager : MonoBehaviour
 {
-    void Start()
-    {
-        
-    }
+    [SerializeField]
+    Transform myCube;
+    [SerializeField]
+    Transform mySphere;
+    [SerializeField]
+    Transform myCylinder;
+    [SerializeField]
+    Transform myCapsule;
+
+    public PhotonView photonView;
+
 
     void Update()
     {
-        
+        if (PhotonNetwork.InRoom && !photonView.IsMine)
+        {
+            return;
+        }
     }
 
     public void CubeInstantiation()
     {
-        /*GameObject != gameObject*/
-        GameObject cubeObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
-
-        /*if you need add position, scale and color to the cube*/
-        cubeObject.transform.localPosition = new Vector3(0, 1, 0);
-        cubeObject.transform.localScale = new Vector3(1, 1, 1);
-        cubeObject.GetComponent<MeshRenderer>().material.color = Color.red;
+        Instantiate(Resources.Load("Cube"), myCube.position, myCube.rotation);
     }
 
     public void SphereInstantiation()
     {
-        /*GameObject != gameObject*/
-        GameObject cubeObject = GameObject.CreatePrimitive(PrimitiveType.Sphere);
-
-        /*if you need add position, scale and color to the cube*/
-        cubeObject.transform.localPosition = new Vector3(-2, 1, 0);
-        cubeObject.transform.localScale = new Vector3(1, 1, 1);
-        cubeObject.GetComponent<MeshRenderer>().material.color = Color.yellow;
+        Instantiate(Resources.Load("Sphere"), mySphere.position, mySphere.rotation);
     }
 
     public void CapsuleInstantiation()
     {
-        /*GameObject != gameObject*/
-        GameObject cubeObject = GameObject.CreatePrimitive(PrimitiveType.Capsule);
-
-        /*if you need add position, scale and color to the cube*/
-        cubeObject.transform.localPosition = new Vector3(2, 1, 0);
-        cubeObject.transform.localScale = new Vector3(1, 1, 1);
-        cubeObject.GetComponent<MeshRenderer>().material.color = Color.blue;
+        Instantiate(Resources.Load("Capsule"), myCapsule.position, myCapsule.rotation);
     }
 
     public void CylinderInstantiation()
     {
-        /*GameObject != gameObject*/
-        GameObject cubeObject = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-
-        /*if you need add position, scale and color to the cube*/
-        cubeObject.transform.localPosition = new Vector3(0, 1, 0);
-        cubeObject.transform.localScale = new Vector3(1, 1, 1);
-        cubeObject.GetComponent<MeshRenderer>().material.color = Color.black;
+        Instantiate(Resources.Load("Cylinder"), myCylinder.position, myCylinder.rotation);
     }
 }
