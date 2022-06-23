@@ -5,7 +5,7 @@ using UnityEngine;
 public class Grid : MonoBehaviour
 {
     [SerializeField]
-    private float size = 1f;
+    private float size = 0.2f;
 
    // public float Size { get { return size; } }
 
@@ -19,9 +19,9 @@ public class Grid : MonoBehaviour
 
 
         Vector3 result = new Vector3(
-        (float)xCount * size,
-        (float)yCount * size,
-        (float)zCount * size);
+            (float)xCount * size,
+            (float)yCount * size,
+            (float)zCount * size);
 
         result += transform.position;
 

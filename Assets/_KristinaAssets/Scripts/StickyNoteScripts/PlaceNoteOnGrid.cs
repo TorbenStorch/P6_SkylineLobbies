@@ -38,9 +38,9 @@ public class PlaceNoteOnGrid : MonoBehaviour
 
 
 
-    private void PlaceNear(Vector3 nearPoint)
+    private void PlaceNear(Vector3 clickPoint)
     {
-        var finalPosition = grid.GetNearestPointOnGrid(nearPoint);
+        var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
         GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
     }
 
