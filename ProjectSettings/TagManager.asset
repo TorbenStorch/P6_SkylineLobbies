@@ -10,6 +10,7 @@ TagManager:
   - Ball
   - Ball2
   - Ball3
+  - Whiteboard
   layers:
   - Default
   - TransparentFX

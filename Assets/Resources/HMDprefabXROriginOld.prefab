@@ -1111,7 +1111,7 @@ GameObject:
   - component: {fileID: -1538887134850481955}
   - component: {fileID: 6105740166991170351}
   m_Layer: 0
-  m_Name: HMDprefabXROrigin
+  m_Name: HMDprefabXROriginOld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1356,7 +1356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb48b9f9424184b4689a2f7ddcfe0921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  vrCamera: {fileID: 1389893002601636612}
+  targetTransform: {fileID: 1389893001071061338}
   photonView: {fileID: -8418562844881325941}
 --- !u!1 &5703823502075331552
 GameObject:
