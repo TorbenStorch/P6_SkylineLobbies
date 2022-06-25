@@ -979,18 +979,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f82af167d383fbe459defdedc69c24e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  useRotation: 0
-  usePosition: 1
-  _tracker: {fileID: 8545406948786300671}
-  _leftController: {fileID: 388672896}
-  _rightController: {fileID: 1923702040}
-  _instantianteCameraRig: 0
-  _cameraRigPrefab: {fileID: 543686318}
-  _caveDimentions: {x: 2, y: 2, z: 2}
-  _trackerVisuals: {fileID: 0}
-  _timeTillCalibration: 3
-  _setOnStart: 1
-  _debugStart: 0
 --- !u!4 &385590256
 Transform:
   m_ObjectHideFlags: 0
@@ -3511,7 +3499,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1628587050
 Transform:
   m_ObjectHideFlags: 0
