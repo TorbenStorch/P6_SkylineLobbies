@@ -38,9 +38,9 @@ public class WhiteboardMarker : MonoBehaviour
 	}
 	private void Update()
 	{
-		//Draw();
+		Draw();
 
-		photonView.RPC("Draw", RpcTarget.All);
+		//photonView.RPC("Draw", RpcTarget.All);
 	}
 
 	[PunRPC]private void Draw()
@@ -61,7 +61,7 @@ public class WhiteboardMarker : MonoBehaviour
 				var y = (int)(touchPos.y * whiteboard.textureSize.y - (penSize / 2));
 
 				//if pixels outside of texture (not on whiteborad) -> exit
-				if (y < 0 + (penSize) || y > whiteboard.textureSize.y - (penSize) || x < 0 + (penSize) || x > whiteboard.textureSize.x - (penSize))
+				if (y < 0 || y > whiteboard.textureSize.y - (penSize) || x < 0 || x > whiteboard.textureSize.x - (penSize))
 				{
 					return;
 				}
