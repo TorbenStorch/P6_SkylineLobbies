@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 15-06-2022
+last change: 25-06-2022
 Topic: Script to deactivate different Components/GameObjects to ensure Photon will not try to use both
 ---------------------------------------------------------*/
 using System.Collections;
@@ -17,6 +17,7 @@ public class DeactivateThings : MonoBehaviour
 	[SerializeField] PhotonView photonView;
 
 	[Header("Objects to deactivate:")]
+	[Space(10)]
 	[SerializeField] GameObject[] deactivateObjects;
 	[SerializeField] Camera cameraToTurnOff;
 	[SerializeField] AudioListener audioListenerToTurnOff;
