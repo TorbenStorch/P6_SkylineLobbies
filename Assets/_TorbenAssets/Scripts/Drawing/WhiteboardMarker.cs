@@ -38,12 +38,15 @@ public class WhiteboardMarker : MonoBehaviour
 	}
 	private void Update()
 	{
-		Draw();
-
-		//photonView.RPC("Draw", RpcTarget.All);
+		//Draw();
+		if (PhotonNetwork.InRoom)
+			photonView.RPC("Draw", RpcTarget.All);
+		else
+			Draw();
 	}
 
-	[PunRPC]private void Draw()
+	[PunRPC]
+	private void Draw()
 	{
 		if (Physics.Raycast(tip.position, transform.up, out touch, tipHeight))
 		{

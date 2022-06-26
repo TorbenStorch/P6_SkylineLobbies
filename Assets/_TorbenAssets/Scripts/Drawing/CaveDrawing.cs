@@ -7,11 +7,18 @@ public class CaveDrawing : MonoBehaviour
 	[SerializeField] GameObject targetHand;
 	[SerializeField] GameObject marker;
 	[SerializeField] GameObject markerPos;
+
+
+	private void Start()
+	{
+		if (!targetHand) Debug.LogError("No Target Hand!");
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject == targetHand)
+		if (other.gameObject == targetHand)
 		{
-			marker.transform.position = new Vector3(marker.transform.position.x,markerPos.transform.position.y, marker.transform.position.z);
+			marker.transform.position = new Vector3(marker.transform.position.x, markerPos.transform.position.y, marker.transform.position.z);
 		}
 	}
 	private void OnTriggerStay(Collider other)
