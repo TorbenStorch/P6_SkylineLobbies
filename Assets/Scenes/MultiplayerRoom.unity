@@ -300,7 +300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabCAVE: {fileID: 4004961181177070027, guid: b0552b4938c754e4093d2c36fafbcbe4,
     type: 3}
-  prefabHMD: {fileID: 1389893002896051346, guid: ee460c5afe9529d4c88ba16bad0d2387,
+  prefabHMD: {fileID: 3067293671715074443, guid: e8b7868f57b276d41bdd7c84a697a54c,
     type: 3}
   prefabCAVEpos: {x: 0, y: 0.75, z: -4}
   prefabHMDpos: {x: 0, y: 0, z: 4}

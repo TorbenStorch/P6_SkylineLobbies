@@ -9,14 +9,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class MapHeadToCam : MonoBehaviour
+public class MapObjectToTarget : MonoBehaviour
 {
-	[SerializeField] Transform vrCamera;
+	[SerializeField] Transform targetTransform;
 	[SerializeField] PhotonView photonView;
 	void Update()
 	{
 		if (photonView.IsMine)
-			MapPosition(transform, vrCamera);
+			MapPosition(transform, targetTransform);
 	}
 	void MapPosition(Transform target, Transform rigTransform)
 	{

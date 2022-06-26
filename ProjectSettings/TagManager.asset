@@ -10,8 +10,7 @@ TagManager:
   - Ball
   - Ball2
   - Ball3
-  - Interactable
-  - Ground
+  - Whiteboard
   layers:
   - Default
   - TransparentFX
@@ -21,8 +20,8 @@ TagManager:
   - UI
   - Teleport
   - 
-  - Hands
-  - Interactive
+  - 
+  - 
   - 
   - 
   - 
