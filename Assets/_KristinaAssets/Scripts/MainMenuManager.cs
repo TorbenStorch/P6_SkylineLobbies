@@ -73,7 +73,7 @@ public class MainMenuManager : MonoBehaviour
 
             currentActivePanel = sofiaPanel;
             isCampusPanelActive = true;
-        
+
 
     }
 
@@ -84,6 +84,7 @@ public class MainMenuManager : MonoBehaviour
 
         currentActivePanel = clujPanel;
         isCampusPanelActive = true;
+
     }
 
     public void switchToCyprus()
@@ -93,6 +94,7 @@ public class MainMenuManager : MonoBehaviour
 
         currentActivePanel = cyprusPanel;
         isCampusPanelActive = true;
+
     }
 
     public void switchToDarmstadt()
@@ -102,6 +104,7 @@ public class MainMenuManager : MonoBehaviour
 
         currentActivePanel = darmstadtPanel;
         isCampusPanelActive = true;
+
     }
 
 
@@ -116,9 +119,8 @@ public class MainMenuManager : MonoBehaviour
             isCampusPanelActive = false;
 
             mapPanel.SetActive(true);
-        
 
-        
+
     }
 
 
@@ -142,17 +144,16 @@ public class MainMenuManager : MonoBehaviour
 
     public void Refresh()
     {
-
         //----Sofia----//
-        
-            foreach (GameObject card in sofiaProjectCards)
-            {
+
+        foreach (GameObject card in sofiaProjectCards)
+        {
                 card.SetActive(true);
                 card.transform.localPosition = new Vector2(0, 0);
                 card.transform.localEulerAngles = new Vector3(0, 0, 0);
 
                 card.GetComponent<Image>().color = new Color(255, 255, 255, 1);
-            }
+        }
         
 
 

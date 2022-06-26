@@ -14,12 +14,16 @@ public class ButtonVR : MonoBehaviour
     AudioSource sound;
     bool isPressed;
 
-
+    private Vector3 buttonRange = new Vector3(0, 0.5f, 0);
+    private Vector3 buttonStartPos;
 
     private void Start()
     {
         sound = GetComponent<AudioSource>();
         isPressed = false;
+
+        buttonStartPos = button.transform.localPosition;
+
 
     }
 
@@ -28,28 +32,37 @@ public class ButtonVR : MonoBehaviour
     {
         if (!isPressed)
         {
-            button.transform.localPosition = new Vector3(0, 0.003f, 0);
+            button.transform.localPosition = buttonStartPos - buttonRange;
             presser = other.gameObject;
             onPress.Invoke();
             sound.Play();
             isPressed = true;
+
+            //Debug.Log(other);
         }
+
+
     }
+
 
 
     private void OnTriggerExit(Collider other)
     {
+        button.transform.localPosition = buttonStartPos;
+
         if (other == presser)
-        {
-            button.transform.localPosition = new Vector3(0, 0.015f, 0);
+        {            
             onRelease.Invoke();
             sound.Play();
             isPressed = false;
+
         }
+
+        Debug.Log(other); //its the hand model (cube/sphere in my case)
     }
 
 
-
+   
 
     public void ExitApp()
     {
