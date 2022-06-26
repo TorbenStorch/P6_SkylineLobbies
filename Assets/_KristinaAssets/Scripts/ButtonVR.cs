@@ -52,8 +52,7 @@ public class ButtonVR : MonoBehaviour
 
         if (other == presser)
         {            
-            onRelease.Invoke();
-            sound.Play();
+            onRelease.Invoke();    
             isPressed = false;
 
         }

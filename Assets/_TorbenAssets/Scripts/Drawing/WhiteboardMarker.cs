@@ -39,7 +39,7 @@ public class WhiteboardMarker : MonoBehaviour
 	private void Update()
 	{
 		//Draw();
-		if (PhotonNetwork.InRoom)
+		if (PhotonNetwork.InRoom && photonView.IsMine)
 			photonView.RPC("Draw", RpcTarget.All);
 		else
 			Draw();

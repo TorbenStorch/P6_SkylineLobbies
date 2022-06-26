@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eb48b9f9424184b4689a2f7ddcfe0921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  targetTransform: {fileID: 3067293670864491587}
+  targetTransform: {fileID: 3067293671286496797}
   photonView: {fileID: 3671439438237470098}
 --- !u!1 &3067293670864491586
 GameObject:
