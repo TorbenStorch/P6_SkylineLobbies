@@ -201,7 +201,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 7967888740307557885}
         m_TargetAssemblyTypeName: InstantiationManagerVR, Assembly-CSharp
-        m_MethodName: InstantiatorManager
+        m_MethodName: SphereInstantiation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
