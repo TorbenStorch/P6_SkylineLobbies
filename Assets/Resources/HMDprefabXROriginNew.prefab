@@ -164,7 +164,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3067293671168774935}
   - component: {fileID: 3067293671168774939}
-  - component: {fileID: 2839187464250926855}
   - component: {fileID: 5910912003213653355}
   - component: {fileID: 2270512047314352108}
   m_Layer: 0
@@ -367,22 +366,6 @@ MonoBehaviour:
     m_Reference: {fileID: 7779212132400271959, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &2839187464250926855
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3067293671168774934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &5910912003213653355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -676,7 +659,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3067293671356283359}
   - component: {fileID: 3067293671356283331}
-  - component: {fileID: 6825673246862884003}
   - component: {fileID: 3067293671356283356}
   - component: {fileID: 3067293671356283357}
   m_Layer: 0
@@ -879,22 +861,6 @@ MonoBehaviour:
     m_Reference: {fileID: 875253871413052681, guid: c348712bda248c246b8c49b3db54643f,
       type: 3}
   m_ButtonPressPoint: 0.5
---- !u!114 &6825673246862884003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3067293671356283358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_SynchronizePosition: 1
-  m_SynchronizeRotation: 1
-  m_SynchronizeScale: 0
-  m_UseLocal: 1
 --- !u!114 &3067293671356283356
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1080,10 +1046,10 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 8773313351856781056}
   - {fileID: 3894673078793529777}
+  - {fileID: 8852280714939305017}
   - {fileID: 6353376470850137606}
+  - {fileID: 1431701112852899620}
   - {fileID: 8565796960454606253}
-  - {fileID: 2839187464250926855}
-  - {fileID: 6825673246862884003}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -1116,7 +1082,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 3671439438237470098}
-  deactivateObjects: []
+  deactivateObjects:
+  - {fileID: 3067293671168774934}
+  - {fileID: 3067293671356283358}
+  - {fileID: 8116675100460192650}
+  - {fileID: 8116675100506314347}
+  - {fileID: 8116675099021460475}
+  - {fileID: 8116675099214619584}
   cameraToTurnOff: {fileID: 3067293671286496768}
   audioListenerToTurnOff: {fileID: 3067293671286496799}
   deactavateXROrigin: 0
@@ -1357,6 +1329,7 @@ GameObject:
   - component: {fileID: 6222683937187025181}
   - component: {fileID: 3894673078793529777}
   - component: {fileID: 4813332471605683937}
+  - component: {fileID: 8852280714939305017}
   m_Layer: 0
   m_Name: Custom Left Hand Model
   m_TagString: Untagged
@@ -1439,6 +1412,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 3067293671168774935}
   photonView: {fileID: 3671439438237470098}
+--- !u!114 &8852280714939305017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6222683937179607723}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6222683937179607725
 GameObject:
   m_ObjectHideFlags: 0
@@ -2710,6 +2699,7 @@ GameObject:
   - component: {fileID: 6265457496977000072}
   - component: {fileID: 6353376470850137606}
   - component: {fileID: 6563797462062091040}
+  - component: {fileID: 1431701112852899620}
   m_Layer: 0
   m_Name: Custom Right Hand Model
   m_TagString: Untagged
@@ -2792,6 +2782,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 3067293671356283359}
   photonView: {fileID: 3671439438237470098}
+--- !u!114 &1431701112852899620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6265457496967492926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SynchronizePosition: 1
+  m_SynchronizeRotation: 1
+  m_SynchronizeScale: 0
+  m_UseLocal: 1
 --- !u!1 &6265457496967492928
 GameObject:
   m_ObjectHideFlags: 0
