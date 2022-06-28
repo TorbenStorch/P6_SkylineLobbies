@@ -1996,6 +1996,11 @@ PrefabInstance:
       propertyPath: m_InteractionLayers.m_Bits
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 2446969220362380600, guid: be9d1526258be86449132af6e3492b89,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 2733197508503159453, guid: be9d1526258be86449132af6e3492b89,
         type: 3}
       propertyPath: m_Name
