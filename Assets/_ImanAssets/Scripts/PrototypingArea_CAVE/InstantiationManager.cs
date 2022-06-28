@@ -8,6 +8,7 @@ Topic: Script for instantiate the gameobjects - Prototyping area - CAVE side
 using UnityEngine;
 using Photon.Pun;
 
+
 public class InstantiationManager : MonoBehaviour
 {
     [SerializeField] Transform myCube;

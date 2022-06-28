@@ -1,14 +1,14 @@
 /*-------------------------------------------------------
 Creator: Iman Nikkhahazad
 Expanded Realities P6
-last change: 26-06-2022
-Topic: Script for combining the gameobjects - Prototyping area - CAVE side
+last change: 28-06-2022
+Topic: Script for combining the gameobjects - Prototyping area - VR side
 ---------------------------------------------------------*/
 
 using UnityEngine;
 using Photon.Pun;
 
-public class CombiningManager : MonoBehaviour
+public class CombiningManagerVR : MonoBehaviour
 {
     private bool hascollided;
 
@@ -22,17 +22,11 @@ public class CombiningManager : MonoBehaviour
         }
     }
 
-    public void OnCollisionEnter(Collision collision)
+    public void OnTriggerEnter(Collider other)
     {
-        // if(hascollided)
-        //  {
-        //   return;
-        //}
-
-        if (collision.gameObject.CompareTag("Interactable"))
+        if (other.CompareTag("Interactable"))
         {
             Debug.Log("collision happened");
-            //hascollided = true;
         }
     }
 }
