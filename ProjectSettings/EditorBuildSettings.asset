@@ -5,12 +5,9 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/Menu_CAVE.unity
-    guid: 4d7207f61682d1541ab6cbd160155688
   - enabled: 1
-    path: Assets/Scenes/Menu_CAVE_v02.unity
-    guid: 6c2a223e0edde5a4e8351cf8b6e27d86
+    path: Assets/Scenes/Menu_CAVE_v03.unity
+    guid: bdadea1a0f9c56a44bbd528d4e258e3b
   - enabled: 0
     path: Assets/Scenes/Menu_VR.unity
     guid: b194cc45cd74112409197a57d6fe5d24

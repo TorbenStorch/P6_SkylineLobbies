@@ -13,8 +13,8 @@ using UnityEngine.SceneManagement;
 public class RoomManager : MonoBehaviourPunCallbacks //Spawn the prefabs 
 {
 	[SerializeField] GameObject prefabCAVE, prefabHMD;
-	[SerializeField] Vector3 prefabCAVEpos, prefabHMDpos;
-	[SerializeField] Quaternion prefabCAVErot, prefabHMDrot;
+	[SerializeField] Vector3 prefabCavePos, prefabHmdPos;
+	[SerializeField] Quaternion prefabCaveRot, prefabHmdRot;
 
 	#region Singleton
 	public static RoomManager Instance { set; get; }
@@ -53,7 +53,7 @@ public class RoomManager : MonoBehaviourPunCallbacks //Spawn the prefabs
 			switch (SelectDevice.deviceType)
 			{
 				case "CAVE":
-					PhotonNetwork.Instantiate(prefabCAVE.name, prefabCAVEpos, prefabCAVErot);
+					PhotonNetwork.Instantiate(prefabCAVE.name, prefabCavePos, prefabCaveRot);
 					break;
 
 				//case "PROJECTOR":
@@ -61,7 +61,7 @@ public class RoomManager : MonoBehaviourPunCallbacks //Spawn the prefabs
 				//	break;
 
 				case "HMD":
-					PhotonNetwork.Instantiate(prefabHMD.name, prefabHMDpos, prefabHMDrot);
+					PhotonNetwork.Instantiate(prefabHMD.name, prefabHmdPos, prefabHmdRot);
 					break;
 
 				default:
