@@ -10,9 +10,9 @@ using Photon.Pun;
 
 public class CombiningManagerVR : MonoBehaviour
 {
-    private bool hascollided;
-
     public PhotonView photonView;
+
+    private bool firstHit;
 
     void Update()
     {
@@ -22,11 +22,24 @@ public class CombiningManagerVR : MonoBehaviour
         }
     }
 
-    public void OnTriggerEnter(Collider other)
+    //public void OnTriggerEnter(Collider other)
+    //{
+    //    if (other.CompareTag("Interactable"))
+    //    {
+    //        Debug.Log("VR collision happened between game objects");
+    //    }
+    //}
+
+    public void ParentsCheck()
     {
-        if (other.CompareTag("Interactable"))
+        if (firstHit == true)
         {
-            Debug.Log("collision happened");
+            Debug.Log("Second hit");
+        }
+        else
+        {
+            firstHit = true;
+            Debug.Log("First hit");
         }
     }
 }

@@ -1,13 +1,13 @@
 /*-------------------------------------------------------
 Creator: Iman Nikkhahazad
 Expanded Realities P6
-last change: 26-06-2022
+last change: 28-06-2022
 Topic: Script for instantiate the gameobjects - Prototyping area - CAVE side
 ---------------------------------------------------------*/
 
 using UnityEngine;
 using Photon.Pun;
-
+using System.IO;
 
 public class InstantiationManager : MonoBehaviour
 {
@@ -31,11 +31,13 @@ public class InstantiationManager : MonoBehaviour
     {
         if(PhotonNetwork.InRoom)
         {
-            PhotonNetwork.Instantiate("Cube", myCube.position, myCube.rotation);
+            PhotonNetwork.Instantiate(Path.Combine("CAVE", "Cube"), myCube.position, myCube.rotation);
+            Debug.Log("Cube in multiplayer scene has instantiated");
         }
         else
         {
-            Instantiate(Resources.Load("Cube"), myCube.position, myCube.rotation);
+            Instantiate(Resources.Load(Path.Combine("CAVE", "Cube")), myCube.position, myCube.rotation);
+            Debug.Log("Cube in singleplayer scene has instantiated");
         }
     }
 
@@ -43,11 +45,13 @@ public class InstantiationManager : MonoBehaviour
     {
         if(PhotonNetwork.InRoom)
         {
-            PhotonNetwork.Instantiate("Sphere", mySphere.position, mySphere.rotation);
+            PhotonNetwork.Instantiate(Path.Combine("CAVE", "Sphere"), mySphere.position, mySphere.rotation);
+            Debug.Log("Sphere in multiplayer scene has instantiated");
         }
         else
         {
-            Instantiate(Resources.Load("Sphere"), mySphere.position, mySphere.rotation);
+            Instantiate(Resources.Load(Path.Combine("CAVE", "Sphere")), mySphere.position, mySphere.rotation);
+            Debug.Log("Sphere in singleplayer scene has instantiated");
         }
     }
 
@@ -55,11 +59,13 @@ public class InstantiationManager : MonoBehaviour
     {
         if (PhotonNetwork.InRoom)
         {
-            PhotonNetwork.Instantiate("Capsule", myCapsule.position, myCapsule.rotation);
+            PhotonNetwork.Instantiate(Path.Combine("CAVE", "Capsule"), myCapsule.position, myCapsule.rotation);
+            Debug.Log("Capsule in multiplayer scene has instantiated");
         }
         else
         {
-            Instantiate(Resources.Load("Capsule"), myCapsule.position, myCapsule.rotation);
+            Instantiate(Resources.Load(Path.Combine("CAVE", "Capsule")), myCapsule.position, myCapsule.rotation);
+            Debug.Log("Capsule in singleplayer scene has instantiated");
         }
     }
 
@@ -67,11 +73,13 @@ public class InstantiationManager : MonoBehaviour
     {
         if (PhotonNetwork.InRoom)
         {
-            PhotonNetwork.Instantiate("Cylinder", myCylinder.position, myCylinder.rotation);
+            PhotonNetwork.Instantiate(Path.Combine("CAVE", "Cylinder"), myCylinder.position, myCylinder.rotation);
+            Debug.Log("Cylinder in multiplayer scene has instantiated");
         }
         else
         {
-            Instantiate(Resources.Load("Cylinder"), myCylinder.position, myCylinder.rotation);
+            Instantiate(Resources.Load(Path.Combine("CAVE", "Cylinder")), myCylinder.position, myCylinder.rotation);
+            Debug.Log("Cylinder in singleplayer scene has instantiated");
         }
     }
 }

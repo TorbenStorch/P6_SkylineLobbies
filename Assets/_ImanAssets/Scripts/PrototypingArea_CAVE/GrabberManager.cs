@@ -1,7 +1,8 @@
 /*-------------------------------------------------------
-Creator: Iman Nikkhahazad
+Creator: YouTube channel: https://www.youtube.com/watch?v=uNCCS6DjebA
+Modified and adjusted by Iman Nikkhahazad
 Expanded Realities P6
-last change: 26-06-2022
+last change: 28-06-2022
 Topic: Script for grabbing the gameobjects - Prototyping area - CAVE side
 ---------------------------------------------------------*/
 
@@ -11,11 +12,26 @@ using Photon.Pun;
 
 public class GrabberManager : MonoBehaviour
 {
-    public PhotonView photonView;
+    GameObject interactable;
+    GameObject player;
+    
     private GameObject selectedObject;
+    public PhotonView photonView;
+
+    private bool firstHit;
+
+    void Awake()
+    {
+        interactable = GameObject.FindGameObjectWithTag("Interactable");
+    }
 
     void Update()
     {
+        if (PhotonNetwork.InRoom && !photonView.IsMine)
+        {
+            return;
+        }
+
         if (Input.GetMouseButtonDown(0))
         {
             if (selectedObject == null)
@@ -27,9 +43,27 @@ public class GrabberManager : MonoBehaviour
                     {
                         return;
                     }
-
-                    selectedObject = hit.collider.gameObject;
-                    Cursor.visible = false;
+                    else
+                    {
+                        if (firstHit == true)
+                        {
+                            selectedObject = hit.collider.gameObject;
+                            Debug.Log("Second hit");
+                            Cursor.visible = false;
+                            if (Input.GetKeyDown(KeyCode.Space))
+                            {
+                                Debug.Log("set childeren");
+                            }
+                        }
+                        else
+                        {
+                            selectedObject = hit.collider.gameObject;
+                            firstHit = true;
+                            SetParent(interactable);
+                            Debug.Log("First hit");
+                            Cursor.visible = false;
+                        }
+                    }
                 }
             }
             else
@@ -75,5 +109,22 @@ public class GrabberManager : MonoBehaviour
         Physics.Raycast(worldMousePosNear, worldMousePosFar - worldMousePosNear, out hit);
 
         return hit;
+    }
+
+    //Invoked when a button is pressed.
+    public void SetParent(GameObject newParent)
+    {
+        //Makes the GameObject "newParent" the parent of the GameObject "player".
+        player.transform.parent = newParent.transform;
+
+        //Display the parent's name in the console.
+        Debug.Log("Player's Parent: " + player.transform.parent.name);
+
+        // Check if the new parent has a parent GameObject.
+        if (newParent.transform.parent != null)
+        {
+            //Display the name of the grand parent of the player.
+            Debug.Log("Player's Grand parent: " + player.transform.parent.parent.name);
+        }
     }
 }
