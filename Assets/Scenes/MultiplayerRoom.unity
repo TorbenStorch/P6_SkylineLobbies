@@ -881,6 +881,7 @@ GameObject:
   - component: {fileID: 1002921734}
   - component: {fileID: 1002921728}
   - component: {fileID: 1002921736}
+  - component: {fileID: 1002921737}
   m_Layer: 0
   m_Name: InteractableCube
   m_TagString: Untagged
@@ -929,7 +930,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1002921737}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 1002921735}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -1052,7 +1065,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: ed7ae8925ed268c4fade82ff32f706bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1090,7 +1103,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002921727}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.37, z: -0.67}
+  m_LocalPosition: {x: 0, y: 1.37, z: 1.962}
   m_LocalScale: {x: 0.26638, y: 0.26638, z: 0.26638}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1129,7 +1142,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1002921734}
@@ -1153,6 +1166,18 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &1002921737
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002921727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1042309904
 GameObject:
   m_ObjectHideFlags: 0
@@ -1683,6 +1708,61 @@ PrefabInstance:
       propertyPath: sceneViewId
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 7169755474928068848, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: OwnershipTransfer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169755474928068848, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: ObservedComponents.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7169755474928068848, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[0]
+      value: 
+      objectReference: {fileID: 1460589779}
+    - target: {fileID: 7169755474928068848, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: ObservedComponents.Array.data[1]
+      value: 
+      objectReference: {fileID: 1460589780}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectExited.m_PersistentCalls.m_Calls.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1460589782}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: TransferOwnership
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: OwnershipTransfer, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 1460589781}
+    - target: {fileID: 8377719771189610432, guid: 45d002667703dde40a7263bbd29b7c12,
+        type: 3}
+      propertyPath: m_SelectEntered.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: Photon.Pun.PhotonView, PhotonUnityNetworking
+      objectReference: {fileID: 0}
     - target: {fileID: 8377719771189610438, guid: 45d002667703dde40a7263bbd29b7c12,
         type: 3}
       propertyPath: m_RootOrder
@@ -1783,6 +1863,30 @@ MonoBehaviour:
   m_SynchronizeAngularVelocity: 0
   m_TeleportEnabled: 1
   m_TeleportIfDistanceGreaterThan: 3
+--- !u!114 &1460589781 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7169755474928068848, guid: 45d002667703dde40a7263bbd29b7c12,
+    type: 3}
+  m_PrefabInstance: {fileID: 1460589777}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460589778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1460589782
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1460589778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1491256962
 GameObject:
   m_ObjectHideFlags: 0
