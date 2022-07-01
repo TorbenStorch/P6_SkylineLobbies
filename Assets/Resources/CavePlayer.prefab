@@ -1919,12 +1919,8 @@ MonoBehaviour:
   observableSearch: 2
   ObservedComponents:
   - {fileID: 1778155309525080853}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 2127418601586941143}
   - {fileID: 2127418601600167216}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 3137517409201525461}
   - {fileID: 5020847070162228578}
   sceneViewId: 0
@@ -1943,8 +1939,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   photonView: {fileID: 4004961181177070070}
-  leftHandAnimator: {fileID: 0}
-  rightHandAnimator: {fileID: 0}
+  leftHandAnimator: {fileID: 5466650730729548409}
+  rightHandAnimator: {fileID: 5437388017135468012}
 --- !u!114 &3375449409807281533
 MonoBehaviour:
   m_ObjectHideFlags: 0
