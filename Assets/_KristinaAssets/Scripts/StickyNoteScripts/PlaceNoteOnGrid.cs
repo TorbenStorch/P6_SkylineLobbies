@@ -17,28 +17,7 @@ public class PlaceNoteOnGrid : MonoBehaviour
 
 
 
-
-    private void Update()
-    {
-        if (Input.GetMouseButtonDown(0))
-        {
-            RaycastHit hitInfo;
-            Ray ray = tableCamera.ScreenPointToRay(Input.mousePosition);
-
-            if (Physics.Raycast(ray, out hitInfo))
-            {
-                PlaceNear(hitInfo.point);
-            }
-    
-        
-        }
-    
-    
-    }
-
-
-
-    private void PlaceNear(Vector3 clickPoint)
+    public void PlaceNear(Vector3 clickPoint)
     {
         var finalPosition = grid.GetNearestPointOnGrid(clickPoint);
         GameObject.CreatePrimitive(PrimitiveType.Cube).transform.position = finalPosition;
