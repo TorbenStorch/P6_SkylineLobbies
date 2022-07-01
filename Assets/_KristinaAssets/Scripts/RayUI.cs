@@ -2,9 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Photon.Pun;
+
 
 public class RayUI : MonoBehaviour
 {
+
+   // [SerializeField]
+   // private PhotonView photonView;
+
+
     //private Vector3 _initialPosition;
 
     [SerializeField]
@@ -14,7 +21,7 @@ public class RayUI : MonoBehaviour
     private void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) /*&& photonView.IsMine*/)
         {
 
             Ray ray = camTable.ScreenPointToRay(Input.mousePosition);
