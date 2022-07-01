@@ -254,7 +254,7 @@ namespace UnityEngine.XR.OpenXR.Features.Interactions
         protected override void RegisterActionMapsWithRuntime()
         {
             //ActivateCameras exists only on the CAVE side not VR
-            if (!FindObjectOfType<ActivateCameras>(false)) 
+            if (SelectDevice.deviceType == "HMD") 
 			{
                 Debug.Log("Unregistering Vive Tracker");
                 //Unregister the Layout so that VR-Inputs function
