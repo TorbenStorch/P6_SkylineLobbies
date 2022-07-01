@@ -9,7 +9,7 @@ public class Instantiate : MonoBehaviour
     [SerializeField] private GameObject startingCanvas;
 
 
-    // Update is called once per frame
+
     public void CreateANote()
     {
         GameObject newNote = Instantiate(stickyNotePrefab) as GameObject;
