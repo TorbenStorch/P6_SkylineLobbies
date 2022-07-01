@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class StickyNote_Grid : MonoBehaviour
 {
-    [SerializeField] private GridNew newGrid;
+    
+    [SerializeField] private GridNew newGrid; //the whiteboard is the new grid
     [SerializeField] private bool _start = false;
+
     private void Update()
     {
         if (_start)
@@ -14,11 +16,18 @@ public class StickyNote_Grid : MonoBehaviour
             _start = false;
         }
     }
+
     public void PlaceThisOnGrid()
     {
+
         _start = true;
-        transform.SetParent(newGrid.transform);
-        this.transform.localPosition = newGrid.GridSnapPos(this.transform.localPosition);
+
+        GameObject thisNote = StickyNoteManager.Instance.selectedObject;
+
+        thisNote.transform.localPosition = newGrid.GridSnapPos(newGrid.RandomCanvasPos());
+        thisNote.transform.rotation = newGrid.transform.rotation;
+
+        thisNote.transform.SetParent(newGrid.transform);
 
     }
 

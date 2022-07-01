@@ -24,13 +24,13 @@ public class RayUI : MonoBehaviour
             if (Physics.Raycast(ray, out hit, Mathf.Infinity)) //instead of infinity, can limit to 10f etc.
             {
                 GameObject hitGameObject = hit.collider.gameObject;
-                Collider hitButton = hitGameObject.GetComponent<Collider>();
+                Button hitButton = hitGameObject.GetComponent<Button>();
 
                 if (hitButton != null)
                 {
                     Debug.Log("button is hit");
                     //call the event of the hit button
-                    hitGameObject.GetComponent<Button>().onClick.Invoke();
+                    hitButton.onClick.Invoke();
                 }
                 else
                 {
