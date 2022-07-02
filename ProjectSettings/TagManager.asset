@@ -11,6 +11,8 @@ TagManager:
   - Ball2
   - Ball3
   - Whiteboard
+  - Interactable
+  - Hand
   layers:
   - Default
   - TransparentFX
@@ -19,7 +21,7 @@ TagManager:
   - Water
   - UI
   - Teleport
-  - 
+  - TopDownCamera
   - 
   - 
   - 

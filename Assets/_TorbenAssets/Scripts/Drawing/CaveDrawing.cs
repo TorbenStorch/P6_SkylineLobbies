@@ -1,3 +1,9 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 02-07-2022
+Topic: Mapping the Marker to the controller if its inside the trigger
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
