@@ -3360,7 +3360,7 @@ GameObject:
   - component: {fileID: 6687418136059546731}
   - component: {fileID: 6687418136059546730}
   - component: {fileID: 6687418136059546741}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: DrawPoint
   m_TagString: ControllerDrawPoint
   m_Icon: {fileID: 0}
@@ -3456,6 +3456,7 @@ GameObject:
   - component: {fileID: 6687418136177846957}
   - component: {fileID: 6687418136177846947}
   - component: {fileID: 6687418136177846946}
+  - component: {fileID: 1788783260836333428}
   m_Layer: 0
   m_Name: LeftHand DirectInteractor
   m_TagString: Untagged
@@ -3758,6 +3759,19 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!135 &1788783260836333428
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687418136177846956}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6687418136486256555
 GameObject:
   m_ObjectHideFlags: 0
@@ -3769,6 +3783,7 @@ GameObject:
   - component: {fileID: 6687418136486256558}
   - component: {fileID: 6687418136486256553}
   - component: {fileID: 6687418136486256552}
+  - component: {fileID: 3238642383567878062}
   m_Layer: 0
   m_Name: RightHand DirectInteractor
   m_TagString: Untagged
@@ -4072,6 +4087,19 @@ MonoBehaviour:
   m_PlayHapticsOnHoverCanceled: 0
   m_HapticHoverCancelIntensity: 0
   m_HapticHoverCancelDuration: 0
+--- !u!135 &3238642383567878062
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6687418136486256555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7019071957978284727
 GameObject:
   m_ObjectHideFlags: 0
