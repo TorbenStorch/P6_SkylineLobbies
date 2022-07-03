@@ -360,7 +360,7 @@ GameObject:
   - component: {fileID: 1327022130140776638}
   - component: {fileID: 1327022130140776609}
   - component: {fileID: 1327022130140776608}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand Controller
   m_TagString: HmdHand
   m_Icon: {fileID: 0}
@@ -687,7 +687,7 @@ GameObject:
   - component: {fileID: 1327022130494218854}
   - component: {fileID: 7709168505714983958}
   - component: {fileID: 2844527162261472913}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand Controller
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2399,7 +2399,7 @@ GameObject:
   - component: {fileID: 5215036636757226122}
   - component: {fileID: 5215036636757226117}
   - component: {fileID: 5215036636757226116}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LeftHand Interactor Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}
