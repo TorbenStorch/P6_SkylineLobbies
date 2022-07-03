@@ -8207,6 +8207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  photonView: {fileID: 6723809546038586108}
 --- !u!4 &6723809546038586106
 Transform:
   m_ObjectHideFlags: 0

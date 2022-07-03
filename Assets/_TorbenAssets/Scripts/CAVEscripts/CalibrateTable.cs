@@ -7,16 +7,20 @@ Topic: Script for Calibrating and Set TablePosition
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CalibrateTable : MonoBehaviour //Script is placed on Table Parent
 {
 	[Tooltip("Press 'T' to set object to target position")]
 	[SerializeField] GameObject target;
+	
+	[SerializeField] PhotonView photonView;
 	void Update()
 	{
 		if (!target) target = GameObject.FindGameObjectWithTag("ControllerDrawPoint");
-		if (Input.GetKeyDown(KeyCode.T) && target) 
+		if (Input.GetKeyDown(KeyCode.T) && target ) 
 		{
+			photonView.RequestOwnership();
 			gameObject.transform.position = target.transform.position; 
 		}
 	}
