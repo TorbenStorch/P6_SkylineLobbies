@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 02-07-2022
+last change: 03-07-2022
 Topic: Script to Instantiate the Draw-Paper inside the cave & move it back & forth
 ---------------------------------------------------------*/
 using System.Collections;
@@ -10,7 +10,7 @@ using UnityEngine;
 using Photon.Pun;
 using UnityEngine.XR.Interaction.Toolkit;
 
-public class SpawnDrawingPaper : MonoBehaviour
+public class ManageDrawingPaper : MonoBehaviour
 {
 	[SerializeField] GameObject prefabDrawingPaper;
 	[SerializeField] GameObject caveWhiteboardPos;
@@ -19,16 +19,15 @@ public class SpawnDrawingPaper : MonoBehaviour
 	XRGrabInteractable xRGrabInteractable;
 
 	GameObject paper;
-	Vector3 originPos;
+	
 	bool canMove = true;
+
 	public void SpawnPaper()
 	{
 		if (PhotonNetwork.InRoom)
 			paper = PhotonNetwork.Instantiate(prefabDrawingPaper.name, caveWhiteboardPos.transform.position, Quaternion.identity);
 		else
 			paper = Instantiate(prefabDrawingPaper, caveWhiteboardPos.transform.position, Quaternion.identity);
-
-		originPos = caveWhiteboardPos.transform.position;
 		xRGrabInteractable = paper.GetComponent<XRGrabInteractable>();
 		if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;
 	}
@@ -37,18 +36,18 @@ public class SpawnDrawingPaper : MonoBehaviour
 	{
 		if (canMove)
 		{
+			canMove = false;
 			StartCoroutine(MovePaper(paperHmdPos.transform.position));
 			if (xRGrabInteractable != null) xRGrabInteractable.enabled = true;
-			canMove = false;
 		}
 	}
 	public void PushPaperToCave()
 	{
 		if (canMove)
 		{
-			StartCoroutine(MovePaper(originPos));
-			if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;
 			canMove = false;
+			StartCoroutine(MovePaper(caveWhiteboardPos.transform.position));
+			if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;	
 		}
 	}
 

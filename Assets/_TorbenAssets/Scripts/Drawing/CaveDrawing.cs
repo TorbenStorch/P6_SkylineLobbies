@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 02-07-2022
+last change: 03-07-2022
 Topic: Mapping the Marker to the controller if its inside the trigger
 ---------------------------------------------------------*/
 using System.Collections;
@@ -17,9 +17,12 @@ public class CaveDrawing : MonoBehaviour
 
 	private void Start()
 	{
-		if (!targetHand) Debug.LogError("No Target Hand!");
+		if (!targetHand) Debug.LogWarning("No Target Hand in CaveeDrawing!");
 	}
-
+	private void Update()
+	{
+		if(!targetHand)targetHand = GameObject.FindGameObjectWithTag("ControllerDrawPoint");
+	}
 	private void OnTriggerEnter(Collider other)
 	{
 		if (other.gameObject == targetHand)

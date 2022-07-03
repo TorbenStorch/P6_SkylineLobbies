@@ -12,7 +12,8 @@ TagManager:
   - Ball3
   - Whiteboard
   - Interactable
-  - Hand
+  - HmdHand
+  - ControllerDrawPoint
   layers:
   - Default
   - TransparentFX

@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-Last change: 02-07-2022
+Last change: 03-07-2022
 Topic: Custom Button
 ---------------------------------------------------------*/
 using System.Collections;
@@ -11,10 +11,11 @@ using UnityEngine.Events;
 
 public class CustomButton : MonoBehaviour
 {
+	[Tooltip("If the slot is empty, we will look for an GameObject with tag 'HmdHand'!")]
 	[SerializeField] private GameObject handCollider;
 	[SerializeField] private GameObject frame;
 
-	[Range(0.1f,1f)]
+	[Range(0.1f, 1f)]
 	[SerializeField] private float timeToGoDown = 0.1f;
 	[Range(0.1f, 1f)]
 	[SerializeField] private float timeToGoUp = 0.1f;
@@ -26,6 +27,11 @@ public class CustomButton : MonoBehaviour
 	Vector3 startPos;
 
 	private void Start() => startPos = gameObject.transform.localPosition;
+
+	private void Update()
+	{
+		if (handCollider == null) handCollider = GameObject.FindGameObjectWithTag("HmdHand");
+	}
 
 	private void OnTriggerEnter(Collider other)
 	{

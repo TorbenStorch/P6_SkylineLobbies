@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/_KristinaAssets/KristinaTestScenes/StickyNoteInteraction.unity
     guid: 3c399255eafb03941a502c5ee69f455e
+  - enabled: 1
+    path: Assets/_TorbenAssets/TorbenTestScenes/MultiplayerSceneCopy_CAVEDrawing.unity
+    guid: 48427f703f02bcd44a12ad91e9e383da
   m_configObjects:
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 80338f8eb2296c5428c459053449ea2d,
       type: 2}

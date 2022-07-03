@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 02-07-2022
+last change: 03-07-2022
 Topic: Script to Transfer Ownership by entering Trigger Area
 ---------------------------------------------------------*/
 using System.Collections;
@@ -13,6 +13,7 @@ public class OwnershipTransferTrigger : MonoBehaviour
 {
 	//[SerializeField] GameObject[] targetArray;
 	[SerializeField] PhotonView photonView;
+	[SerializeField] LayerMask layer;
 	private void OnTriggerEnter(Collider other)
 	{
 		//foreach (var item in targetArray)
@@ -23,7 +24,12 @@ public class OwnershipTransferTrigger : MonoBehaviour
 		//	}
 		//}
 
-		if (other.gameObject.CompareTag("Hand"))
+		//if (other.gameObject.CompareTag("Hand"))
+		//{
+		//	photonView.RequestOwnership();
+		//}
+
+		if (other.gameObject.layer == layer)
 		{
 			photonView.RequestOwnership();
 		}
