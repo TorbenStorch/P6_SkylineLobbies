@@ -47,7 +47,8 @@ public class ManageDrawingPaper : MonoBehaviour
 		{
 			canMove = false;
 			StartCoroutine(MovePaper(caveWhiteboardPos.transform.position));
-			if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;	
+			if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;
+			paper.transform.rotation = Quaternion.identity;
 		}
 	}
 

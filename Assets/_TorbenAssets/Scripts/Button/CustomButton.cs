@@ -12,7 +12,8 @@ using UnityEngine.Events;
 public class CustomButton : MonoBehaviour
 {
 	[Tooltip("If the slot is empty, we will look for an GameObject with tag 'HmdHand'!")]
-	[SerializeField] private GameObject handCollider;
+	//[SerializeField] private GameObject handCollider;
+	[SerializeField] LayerMask buttonLayer;
 	[SerializeField] private GameObject frame;
 
 	[Range(0.1f, 1f)]
@@ -30,12 +31,15 @@ public class CustomButton : MonoBehaviour
 
 	private void Update()
 	{
-		if (handCollider == null) handCollider = GameObject.FindGameObjectWithTag("HmdHand");
+		//if (handCollider == null) handCollider = GameObject.FindGameObjectWithTag("HmdHand");
 	}
 
 	private void OnTriggerEnter(Collider other)
 	{
-		if (other.gameObject == handCollider && !buttonDown)
+		//if (/*other.gameObject == handCollider*/ other.gameObject.layer == LayerMask.NameToLayer("HandForOwnership") && !buttonDown)
+		//{
+
+		if (  ((buttonLayer.value & (1 << other.gameObject.layer)) > 0)   && !buttonDown)
 		{
 			onPress.Invoke();
 			StartCoroutine(ButtonGoesDown());

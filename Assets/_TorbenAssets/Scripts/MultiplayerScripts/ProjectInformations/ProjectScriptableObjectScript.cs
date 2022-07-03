@@ -14,7 +14,7 @@ public class ProjectScriptableObjectScript : ScriptableObject
 	public string projectName; //name of the Project
 	public enum avaliableProjectScenes //all the scenes that we can switch to (add all scenes for multiplayer aka project rooms)
 	{
-		MultiplayerRoom, MultiplayerSceneCopy_CAVEDrawing
+		MultiplayerRoom, MultiplayerSceneCopy_CAVEDrawing //test scene
 	}
 	public avaliableProjectScenes sceneToLoadWhenJoinedProject;
 }

@@ -7,17 +7,18 @@ Topic: Mapping the Marker to the controller if its inside the trigger
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
 
 public class CaveDrawing : MonoBehaviour
 {
 	[SerializeField] GameObject targetHand;
 	[SerializeField] GameObject marker;
 	[SerializeField] GameObject markerPos;
-
+	[SerializeField] PhotonView markerPhotonView; //set marker ownership
 
 	private void Start()
 	{
-		if (!targetHand) Debug.LogWarning("No Target Hand in CaveeDrawing!");
+		if (!targetHand) Debug.LogWarning("No Target Hand in CaveDrawing!");
 	}
 	private void Update()
 	{
@@ -27,6 +28,7 @@ public class CaveDrawing : MonoBehaviour
 	{
 		if (other.gameObject == targetHand)
 		{
+			markerPhotonView.RequestOwnership();
 			marker.transform.position = new Vector3(marker.transform.position.x, markerPos.transform.position.y, marker.transform.position.z);
 		}
 	}

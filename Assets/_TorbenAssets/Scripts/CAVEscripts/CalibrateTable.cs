@@ -12,16 +12,16 @@ using Photon.Pun;
 public class CalibrateTable : MonoBehaviour //Script is placed on Table Parent
 {
 	[Tooltip("Press 'T' to set object to target position")]
-	[SerializeField] GameObject target;
+	[SerializeField] GameObject target_ControllerDrawPoint;
 	
 	[SerializeField] PhotonView photonView;
 	void Update()
 	{
-		if (!target) target = GameObject.FindGameObjectWithTag("ControllerDrawPoint");
-		if (Input.GetKeyDown(KeyCode.T) && target ) 
+		if (!target_ControllerDrawPoint) target_ControllerDrawPoint = GameObject.FindGameObjectWithTag("ControllerDrawPoint");
+		if (Input.GetKeyDown(KeyCode.T) && target_ControllerDrawPoint ) 
 		{
 			photonView.RequestOwnership();
-			gameObject.transform.position = target.transform.position; 
+			gameObject.transform.position = target_ControllerDrawPoint.transform.position; 
 		}
 	}
 }

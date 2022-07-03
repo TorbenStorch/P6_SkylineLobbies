@@ -29,7 +29,7 @@ public class OwnershipTransferTrigger : MonoBehaviour
 		//	photonView.RequestOwnership();
 		//}
 
-		if (other.gameObject.layer == layer)
+		if (((layer.value & (1 << other.gameObject.layer)) > 0))
 		{
 			photonView.RequestOwnership();
 		}

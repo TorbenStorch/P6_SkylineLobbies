@@ -133,9 +133,9 @@ public class WhiteboardMarker : MonoBehaviour
 
 	public void Start()
 	{
-		if (PhotonNetwork.InRoom && photonView.IsMine)
+		if (PhotonNetwork.InRoom && photonView.IsMine          && PhotonNetwork.IsMasterClient)
 			photonView.RPC("Setup", RpcTarget.AllBuffered);
-		else
+		else if (!PhotonNetwork.InRoom)
 			Setup();
 	}
 
@@ -154,7 +154,7 @@ public class WhiteboardMarker : MonoBehaviour
 		//Draw();
 		if (PhotonNetwork.InRoom && photonView.IsMine)
 			photonView.RPC("Draw", RpcTarget.All);
-		else
+		else if(!PhotonNetwork.InRoom)
 			Draw();
 	}
 

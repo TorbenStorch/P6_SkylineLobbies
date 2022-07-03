@@ -61,7 +61,7 @@ MonoBehaviour:
   photonView: {fileID: -5238533824846283978}
   layer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!1 &4399565044841137432
 GameObject:
   m_ObjectHideFlags: 0

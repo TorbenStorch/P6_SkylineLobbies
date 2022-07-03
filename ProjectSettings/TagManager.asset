@@ -12,7 +12,6 @@ TagManager:
   - Ball3
   - Whiteboard
   - Interactable
-  - HmdHand
   - ControllerDrawPoint
   layers:
   - Default
