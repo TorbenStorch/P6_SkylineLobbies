@@ -20,13 +20,6 @@ public class InstantiationManagerVR : MonoBehaviour
 
     public PhotonView photonView;
 
-    void Update()
-    {
-        if (PhotonNetwork.InRoom && !photonView.IsMine)
-        {
-            return;
-        }
-    }
 
     public void CubeInstantiationNoSubFolder()
     {
@@ -35,19 +28,25 @@ public class InstantiationManagerVR : MonoBehaviour
             return;
         }
 
-        if (PhotonNetwork.InRoom)
+        if (PhotonNetwork.InRoom && photonView.IsMine)
         {
             PhotonNetwork.Instantiate("VRCube", myCube.transform.position, myCube.transform.rotation);
             hasSpawned = true;
             Debug.Log("VR Cube in multiplayer scene has instantiated");
         }
-        else
+        else if(!PhotonNetwork.InRoom)
         {
             Instantiate(Resources.Load(("VRCube")), myCube.transform.position, myCube.transform.rotation);
             hasSpawned = true;
             Debug.Log("VR Cube in singleplayer scene has instantiated");
         }
     }
+
+
+
+
+
+
 
     public void CubeInstantiation()
     {
