@@ -12,7 +12,6 @@ public class CombiningManagerVR : MonoBehaviour
 {
     public PhotonView photonView;
 
-    private bool firstHit;
 
     void Update()
     {
@@ -22,24 +21,11 @@ public class CombiningManagerVR : MonoBehaviour
         }
     }
 
-    //public void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.CompareTag("Interactable"))
-    //    {
-    //        Debug.Log("VR collision happened between game objects");
-    //    }
-    //}
-
-    public void ParentsCheck()
+    public void OnCollisionEnter(Collision collider)
     {
-        if (firstHit == true)
+        if (collider.gameObject.CompareTag("Interactable"))
         {
-            Debug.Log("Second hit");
-        }
-        else
-        {
-            firstHit = true;
-            Debug.Log("First hit");
+            Debug.Log("VR collision happened between game objects");
         }
     }
 }
