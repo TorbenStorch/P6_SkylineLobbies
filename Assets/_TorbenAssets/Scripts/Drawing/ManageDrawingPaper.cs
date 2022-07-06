@@ -37,6 +37,9 @@ public class ManageDrawingPaper : MonoBehaviour
 		if (canMove)
 		{
 			canMove = false;
+
+			paper.GetComponent<PhotonView>().RequestOwnership();
+
 			StartCoroutine(MovePaper(paperHmdPos.transform.position));
 			if (xRGrabInteractable != null) xRGrabInteractable.enabled = true;
 		}
@@ -46,6 +49,9 @@ public class ManageDrawingPaper : MonoBehaviour
 		if (canMove)
 		{
 			canMove = false;
+
+			paper.GetComponent<PhotonView>().RequestOwnership();
+
 			StartCoroutine(MovePaper(caveWhiteboardPos.transform.position));
 			if (xRGrabInteractable != null) xRGrabInteractable.enabled = false;
 			paper.transform.rotation = Quaternion.identity;

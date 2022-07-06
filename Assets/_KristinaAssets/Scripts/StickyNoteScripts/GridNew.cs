@@ -27,8 +27,8 @@ public class GridNew : MonoBehaviour
     {
         _canvasMesurementsY =GetComponent<RectTransform>().rect.height;
         _canvasMesurementsX = GetComponent<RectTransform>().rect.width;
-        Debug.Log(_canvasMesurementsY);
-        Debug.Log(_canvasMesurementsX);
+       //Debug.Log(_canvasMesurementsY);
+       //Debug.Log(_canvasMesurementsX);
 
     }
 
