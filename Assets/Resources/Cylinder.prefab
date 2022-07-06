@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 7347594885127897168}
   - component: {fileID: 5955733222979495204}
   - component: {fileID: 7401286901882105791}
+  - component: {fileID: 2214941273814498450}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Interactable
@@ -137,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 1
+    m_Bits: 12
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -212,9 +213,45 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1123565271018516327}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2214941273814498450}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5955733222979495204}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1123565271018516327}
+        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
+        m_MethodName: set_isKinematic
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
   m_Activated:
     m_PersistentCalls:
       m_Calls:
@@ -323,10 +360,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e1e3b96b874061409ce5ea435155ff0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCube: {fileID: 5261798888154386402, guid: 115219283c30a804392a7b14b7ff5908, type: 3}
-  mySphere: {fileID: 5570087107688307968, guid: 7b178807a035e5948b66a19c4489c2c5,
+  myCube: {fileID: 5261798888154386402, guid: bd08cf0ee15d0cd4a9d229170a3a915f, type: 3}
+  mySphere: {fileID: 5570087107688307968, guid: a37663ab2f6d50a418ccf3e1d5d2d5d1,
     type: 3}
-  myCapsule: {fileID: 7714865427650777347, guid: 12fe74a885a61c84197119a79a6cffc2,
+  myCapsule: {fileID: 7714865427650777347, guid: f11f9b53564e06347abcd0d9babdd1c3,
     type: 3}
   myCylinder: {fileID: 557448228866729222}
   photonView: {fileID: 5955733222979495204}
@@ -346,7 +383,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7401286901882105791}
@@ -369,3 +406,15 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &2214941273814498450
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557448228866729222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

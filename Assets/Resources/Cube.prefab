@@ -17,7 +17,6 @@ GameObject:
   - component: {fileID: 2216462661282256400}
   - component: {fileID: 7236339590264071066}
   - component: {fileID: 8227605356312694521}
-  - component: {fileID: 8791848706378543800}
   - component: {fileID: 8222517964467828684}
   m_Layer: 0
   m_Name: Cube
@@ -203,7 +202,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 2216462661282256400}
         m_TargetAssemblyTypeName: InstantiationManagerVR, Assembly-CSharp
-        m_MethodName: CubeInstantiationNoSubFolder
+        m_MethodName: CubeInstantiation
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -266,30 +265,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 8221223176195673678}
-        m_TargetAssemblyTypeName: UnityEngine.Transform, UnityEngine
-        m_MethodName: SetParent
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8221223176195673678}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Transform, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 5261798888154386402}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SendMessage
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Parent set
           m_BoolArgument: 1
         m_CallState: 2
   m_Deactivated:
@@ -385,11 +360,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myCube: {fileID: 5261798888154386402}
-  mySphere: {fileID: 5570087107688307968, guid: 7b178807a035e5948b66a19c4489c2c5,
+  mySphere: {fileID: 5570087107688307968, guid: a37663ab2f6d50a418ccf3e1d5d2d5d1,
     type: 3}
-  myCapsule: {fileID: 7714865427650777347, guid: 12fe74a885a61c84197119a79a6cffc2,
+  myCapsule: {fileID: 7714865427650777347, guid: f11f9b53564e06347abcd0d9babdd1c3,
     type: 3}
-  myCylinder: {fileID: 557448228866729222, guid: f2df2b3a075d43148b55d2b8facafbaf,
+  myCylinder: {fileID: 557448228866729222, guid: c6de67a8ae76e0e47bf8567a2fe31f61,
     type: 3}
   photonView: {fileID: 7236339590264071066}
 --- !u!114 &7236339590264071066
@@ -408,7 +383,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 8227605356312694521}
@@ -431,19 +406,6 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &8791848706378543800
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d57f0845ff0a8d47a97946897b198ae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  photonView: {fileID: 7236339590264071066}
 --- !u!114 &8222517964467828684
 MonoBehaviour:
   m_ObjectHideFlags: 0

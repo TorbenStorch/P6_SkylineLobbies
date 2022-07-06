@@ -12,15 +12,15 @@ public class CombiningManagerVR : MonoBehaviour
 {
     public PhotonView photonView;
 
-    GameObject interactable;
-    GameObject myObject;
+    //GameObject interactable;
+    //GameObject myObject;
 
     private bool hasCollided;
     private bool hasParented;
 
     void Awake()
     {
-        interactable = GameObject.FindGameObjectWithTag("Interactable");
+        //interactable = GameObject.FindGameObjectWithTag("Interactable");
     }
 
     void Update()
@@ -35,38 +35,38 @@ public class CombiningManagerVR : MonoBehaviour
     {
         if (collider.gameObject.CompareTag("Interactable"))
         {
-            if(!hasParented)
-            {
-                SetParent(interactable);
-                Debug.Log("Parent set");
-                hasParented = true;
-            }
-            else if(hasParented)
-            {
-                SetChild();
-                Debug.Log("Child set");
-            }
+            //if(!hasParented)
+            //{
+            //    SetParent(interactable);
+            //    Debug.Log("Parent set");
+            //    hasParented = true;
+            //}
+            //else if(hasParented)
+            //{
+            //    SetChild();
+            //    Debug.Log("Child set");
+            //}
         }
     }
 
 
-    public void SetParent(GameObject newParent)
-    {
-        myObject.transform.parent = newParent.transform;
+    //public void SetParent(GameObject newParent)
+    //{
+    //    myObject.transform.parent = newParent.transform;
 
-        //Display the parent's name in the console.
-        Debug.Log("Player's Parent: " + myObject.transform.parent.name);
+    //    //Display the parent's name in the console.
+    //    Debug.Log("Player's Parent: " + myObject.transform.parent.name);
 
-        // Check if the new parent has a parent GameObject.
-        if (newParent.transform.parent != null)
-        {
-            //Display the name of the grand parent of the player.
-            Debug.Log("Player's Grand parent: " + myObject.transform.parent.parent.name);
-        }
-    }
+    //    // Check if the new parent has a parent GameObject.
+    //    if (newParent.transform.parent != null)
+    //    {
+    //        //Display the name of the grand parent of the player.
+    //        Debug.Log("Player's Grand parent: " + myObject.transform.parent.parent.name);
+    //    }
+    //}
 
-    public void SetChild()
-    {
+    //public void SetChild()
+    //{
 
-    }
+    //}
 }

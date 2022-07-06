@@ -1,13 +1,12 @@
 /*-------------------------------------------------------
 Creator: Iman Nikkhahazad
 Expanded Realities P6
-last change: 28-06-2022
+last change: 06-07-2022
 Topic: Script for instantiate the gameobjects - Prototyping area - VR side
 ---------------------------------------------------------*/
 
 using UnityEngine;
 using Photon.Pun;
-using System.IO;
 
 public class InstantiationManagerVR : MonoBehaviour
 {
@@ -16,116 +15,95 @@ public class InstantiationManagerVR : MonoBehaviour
     [SerializeField] GameObject myCapsule;
     [SerializeField] GameObject myCylinder;
 
-    private bool hasSpawned;
+    private bool cubeHasSpawned;
+    private bool sphereHasSpawned;
+    private bool capsuleHasSpawned;
+    private bool cylinderHasSpawned;
 
     public PhotonView photonView;
 
 
-    public void CubeInstantiationNoSubFolder()
+    public void CubeInstantiation()
     {
-        if (hasSpawned)
+        if (cubeHasSpawned)
         {
             return;
         }
 
-        if (PhotonNetwork.InRoom && photonView.IsMine)
+        if (PhotonNetwork.InRoom && photonView.IsMine && PhotonNetwork.IsMasterClient)
         {
             PhotonNetwork.Instantiate("Cube", myCube.transform.position, myCube.transform.rotation);
-            hasSpawned = true;
+            cubeHasSpawned = true;
             Debug.Log("Cube in multiplayer scene has instantiated");
         }
         else if(!PhotonNetwork.InRoom)
         {
             Instantiate(Resources.Load(("Cube")), myCube.transform.position, myCube.transform.rotation);
-            hasSpawned = true;
+            cubeHasSpawned = true;
             Debug.Log("Cube in singleplayer scene has instantiated");
-        }
-    }
-
-
-
-
-
-
-
-    public void CubeInstantiation()
-    {
-        if (hasSpawned)
-        {
-            return;
-        }
-
-        if (PhotonNetwork.InRoom)
-        {
-            PhotonNetwork.Instantiate(Path.Combine("VR", "VR Cube"), myCube.transform.position, myCube.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Cube in multiplayer scene has instantiated");
-        }
-        else
-        {
-            Instantiate(Resources.Load(Path.Combine("VR", "VR Cube")), myCube.transform.position, myCube.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Cube in singleplayer scene has instantiated");
         }
     }
 
     public void SphereInstantiation()
     {
-        if (hasSpawned)
+        if (sphereHasSpawned)
         {
             return;
         }
-        if(PhotonNetwork.InRoom)
+
+        if (PhotonNetwork.InRoom && photonView.IsMine && PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate(Path.Combine("VR", "VR Sphere"), mySphere.transform.position, mySphere.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Sphere in multiplayer scene has instantiated");
+            PhotonNetwork.Instantiate("Sphere", mySphere.transform.position, mySphere.transform.rotation);
+            sphereHasSpawned = true;
+            Debug.Log("Sphere in multiplayer scene has instantiated");
         }
-        else
+        else if (!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(Path.Combine("VR", "VR Sphere")), mySphere.transform.position, mySphere.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Sphere in singleplayer scene has instantiated");
+            Instantiate(Resources.Load(("Sphere")), mySphere.transform.position, mySphere.transform.rotation);
+            sphereHasSpawned = true;
+            Debug.Log("Sphere in singleplayer scene has instantiated");
         }
     }
 
     public void CapsuleInstantiation()
     {
-        if (hasSpawned)
+        if (capsuleHasSpawned)
         {
             return;
         }
-        if (PhotonNetwork.InRoom)
+
+        if (PhotonNetwork.InRoom && photonView.IsMine && PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate(Path.Combine("VR", "VR Capsule"), myCapsule.transform.position, myCapsule.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Capsule in multiplayer scene has instantiated");
+            PhotonNetwork.Instantiate("Capsule", myCapsule.transform.position, myCapsule.transform.rotation);
+            capsuleHasSpawned = true;
+            Debug.Log("Capsule in multiplayer scene has instantiated");
         }
-        else
+        else if (!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(Path.Combine("VR", "VR Capsule")), myCapsule.transform.position, myCapsule.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Capsule in singleplayer scene has instantiated");
+            Instantiate(Resources.Load(("Capsule")), myCapsule.transform.position, myCapsule.transform.rotation);
+            capsuleHasSpawned = true;
+            Debug.Log("Capsule in singleplayer scene has instantiated");
         }
     }
 
     public void CylinderInstantiation()
     {
-        if (hasSpawned)
+        if (cylinderHasSpawned)
         {
             return;
         }
-        if (PhotonNetwork.InRoom)
+
+        if (PhotonNetwork.InRoom && photonView.IsMine && PhotonNetwork.IsMasterClient)
         {
-            PhotonNetwork.Instantiate(Path.Combine("VR", "VR Cylinder"), myCylinder.transform.position, myCylinder.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Cylinder in multiplayer scene has instantiated");
+            PhotonNetwork.Instantiate("Cylinder", myCylinder.transform.position, myCylinder.transform.rotation);
+            cylinderHasSpawned = true;
+            Debug.Log("Cylinder in multiplayer scene has instantiated");
         }
-        else
+        else if (!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(Path.Combine("VR", "VR Cylinder")), myCylinder.transform.position, myCylinder.transform.rotation);
-            hasSpawned = true;
-            Debug.Log("VR Cylinder in singleplayer scene has instantiated");
+            Instantiate(Resources.Load(("Cylinder")), myCylinder.transform.position, myCylinder.transform.rotation);
+            cylinderHasSpawned = true;
+            Debug.Log("Cylinder in singleplayer scene has instantiated");
         }
     }
 }
