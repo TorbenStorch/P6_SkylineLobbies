@@ -30,15 +30,15 @@ public class InstantiationManagerVR : MonoBehaviour
 
         if (PhotonNetwork.InRoom && photonView.IsMine)
         {
-            PhotonNetwork.Instantiate("VRCube", myCube.transform.position, myCube.transform.rotation);
+            PhotonNetwork.Instantiate("Cube", myCube.transform.position, myCube.transform.rotation);
             hasSpawned = true;
-            Debug.Log("VR Cube in multiplayer scene has instantiated");
+            Debug.Log("Cube in multiplayer scene has instantiated");
         }
         else if(!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(("VRCube")), myCube.transform.position, myCube.transform.rotation);
+            Instantiate(Resources.Load(("Cube")), myCube.transform.position, myCube.transform.rotation);
             hasSpawned = true;
-            Debug.Log("VR Cube in singleplayer scene has instantiated");
+            Debug.Log("Cube in singleplayer scene has instantiated");
         }
     }
 
