@@ -1122,6 +1122,17 @@
                 },
                 {
                     "name": "",
+                    "id": "723440b3-023c-4f1a-b9ba-96ac2a5ca8ee",
+                    "path": "<Keyboard>/l",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "ccc3c646-618d-4f93-930a-23eef5a164fa",
                     "path": "<OculusTouchController>/trigger",
                     "interactions": "",
