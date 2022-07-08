@@ -8,7 +8,7 @@ public class DisableZRestriction : MonoBehaviour
     public InputActionReference toggleReference = null;
 
     Rigidbody rb;
-    bool toggleBool = false;
+    //bool toggleBool = false;
 
    
     private void Awake()
@@ -30,16 +30,16 @@ public class DisableZRestriction : MonoBehaviour
         //bool isActive = !gameObject.activeSelf;
         //gameObject.SetActive(isActive);
         Debug.Log("pos constraint on z executes");
-        //rb.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
-        //rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-        toggleBool = !toggleBool;
-        
+        rb.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
+        rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+        //toggleBool = !toggleBool;
+
     }
 
-    private void Update() {
-        if (toggleBool) {
-            rb.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
-            rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
-        }
-        }
+    //private void Update() {
+    //    if (toggleBool) {
+    //        rb.constraints = RigidbodyConstraints.None | RigidbodyConstraints.FreezeRotation;
+    //        rb.constraints = RigidbodyConstraints.FreezePositionZ | RigidbodyConstraints.FreezeRotation;
+    //    }
+    //    }
 }

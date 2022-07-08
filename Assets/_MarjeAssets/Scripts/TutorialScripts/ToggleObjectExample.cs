@@ -22,7 +22,8 @@ public class ToggleObjectExample : MonoBehaviour
 
     private void Toggle(InputAction.CallbackContext context)
     {
-        bool isActive = !gameObject.activeSelf;
-        gameObject.SetActive(isActive);
+        //bool isActive = !gameObject.activeSelf;
+        //gameObject.SetActive(isActive);
+        this.transform.position = new Vector3(0, 0, 0); //not even a toggle anymore but I gave up to do it the complicated way
     }
 }
