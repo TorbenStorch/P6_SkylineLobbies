@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8499095351159782487}
   - component: {fileID: 4459416485778154127}
   - component: {fileID: 6274505381851018263}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ GameObject:
   - component: {fileID: 3387692996145882464}
   - component: {fileID: 9175189044332312890}
   - component: {fileID: 7299637914103860845}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,7 +177,7 @@ GameObject:
   - component: {fileID: 1403636455619009044}
   - component: {fileID: 6674585408111902854}
   - component: {fileID: 8576890751389285756}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -267,7 +267,7 @@ GameObject:
   - component: {fileID: -5238533824846283978}
   - component: {fileID: -7760803777186691683}
   - component: {fileID: 5519743768681525121}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: DrawingPaper
   m_TagString: Whiteboard
   m_Icon: {fileID: 0}
@@ -578,7 +578,7 @@ GameObject:
   - component: {fileID: 1154378232398141776}
   - component: {fileID: 3347945904055133471}
   - component: {fileID: 8914140494212069363}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Frame4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

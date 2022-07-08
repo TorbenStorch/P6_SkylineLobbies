@@ -520,7 +520,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 359857270}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59ccd2a481697aa4d902c41edbcea217, type: 3}
   m_Name: 
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1006908134}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59ccd2a481697aa4d902c41edbcea217, type: 3}
   m_Name: 
@@ -1503,6 +1503,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: CavePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4004961181177070027, guid: b0552b4938c754e4093d2c36fafbcbe4,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4004961181177070068, guid: b0552b4938c754e4093d2c36fafbcbe4,
         type: 3}

@@ -15,7 +15,7 @@ public class InstantiationManagerVR : MonoBehaviour
     [SerializeField] GameObject myCapsule;
     [SerializeField] GameObject myCylinder;
 
-    private bool cubeHasSpawned;
+    [SerializeField]private bool cubeHasSpawned;
     private bool sphereHasSpawned;
     private bool capsuleHasSpawned;
     private bool cylinderHasSpawned;
@@ -30,7 +30,7 @@ public class InstantiationManagerVR : MonoBehaviour
             return;
         }
 
-        if (PhotonNetwork.InRoom && photonView.IsMine && PhotonNetwork.IsMasterClient)
+        if (PhotonNetwork.InRoom && photonView.IsMine /*&& PhotonNetwork.IsMasterClient*/)
         {
             PhotonNetwork.Instantiate("Cube", myCube.transform.position, myCube.transform.rotation);
             cubeHasSpawned = true;

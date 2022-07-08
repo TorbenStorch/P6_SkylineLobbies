@@ -133,7 +133,7 @@ public class WhiteboardMarker : MonoBehaviour
 
 	public void Start()
 	{
-		if (PhotonNetwork.InRoom && photonView.IsMine          && PhotonNetwork.IsMasterClient)
+		if (PhotonNetwork.InRoom && photonView.IsMine          /*&& PhotonNetwork.IsMasterClient*/)
 			photonView.RPC("Setup", RpcTarget.AllBuffered);
 		else if (!PhotonNetwork.InRoom)
 			Setup();
