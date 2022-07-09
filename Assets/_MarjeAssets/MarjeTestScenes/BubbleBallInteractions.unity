@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &232668123 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8028124904207134748, guid: e7a795012bb31054c96aa4edd24b1a7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8028124904203354693}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,60 +238,6 @@ MonoBehaviour:
   m_ShadowLayerMask: 1
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
---- !u!1 &451576033 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8028124903734450731, guid: e7a795012bb31054c96aa4edd24b1a7b,
-    type: 3}
-  m_PrefabInstance: {fileID: 8028124904203354693}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &451576035
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451576033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf5fca848539f144cb1470254f149a40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  Paper: {fileID: 1139961537}
-  InfoBubble1: {fileID: 232668123}
---- !u!114 &451576036
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451576033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ccab03dd7574990419b51806c3fc52ea, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  Paper: {fileID: 1139961537}
-  InfoBubble1: {fileID: 232668123}
---- !u!114 &451576037
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 451576033}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8ad73c7afb632d409ac9bdd90251483, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
-    type: 3}
-  Infobubble1: {fileID: 232668123}
-  Paper: {fileID: 1139961537}
 --- !u!1 &734537595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,6 +1301,31 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 536495748000315252, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590861897898925028, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.06880001
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590861897898925028, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026274493
+      objectReference: {fileID: 0}
+    - target: {fileID: 1590861897898925028, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08460965
+      objectReference: {fileID: 0}
+    - target: {fileID: 2413851904155482107, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2606359294943735304, guid: e7a795012bb31054c96aa4edd24b1a7b,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -1376,11 +1341,36 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.08720271
       objectReference: {fileID: 0}
+    - target: {fileID: 5134448797982465556, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.06880001
+      objectReference: {fileID: 0}
+    - target: {fileID: 5134448797982465556, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.026274495
+      objectReference: {fileID: 0}
+    - target: {fileID: 5134448797982465556, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08460964
+      objectReference: {fileID: 0}
     - target: {fileID: 5648997039544265674, guid: e7a795012bb31054c96aa4edd24b1a7b,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: e0bdb8e76a8999a4fbe6480678360805, type: 2}
+    - target: {fileID: 6314009194560988337, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 08c0fb6c47e75114a89114871889d4f8, type: 2}
+    - target: {fileID: 7844047782458078882, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 80433d9b76fd38843b1c5834d1cfba93, type: 2}
     - target: {fileID: 8028124903239971359, guid: e7a795012bb31054c96aa4edd24b1a7b,
         type: 3}
       propertyPath: m_InteractionManager
@@ -1406,6 +1396,11 @@ PrefabInstance:
       propertyPath: m_InteractionManager
       value: 
       objectReference: {fileID: 2132199363}
+    - target: {fileID: 8028124903743817521, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.74
+      objectReference: {fileID: 0}
     - target: {fileID: 8028124903858771236, guid: e7a795012bb31054c96aa4edd24b1a7b,
         type: 3}
       propertyPath: m_Name
@@ -1480,6 +1475,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 120
+      objectReference: {fileID: 0}
+    - target: {fileID: 8028124904207134748, guid: e7a795012bb31054c96aa4edd24b1a7b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8028124904342333469, guid: e7a795012bb31054c96aa4edd24b1a7b,
         type: 3}
