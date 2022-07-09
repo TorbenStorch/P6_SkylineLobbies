@@ -11,6 +11,7 @@ public class WallScript : MonoBehaviour
     public GameObject Ball;
     public GameObject Ball2;
     public GameObject Ball3;
+    public GameObject Paper;
     public float bubblePosition = -0.5f;
     // Start is called before the first frame update
     void Start()
@@ -85,6 +86,9 @@ public class WallScript : MonoBehaviour
             Bubble3.SetActive(true);
             Bubble3.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
             Debug.Log("Bubbleactive");
+
+            //Paper.SetActive(true);
+            Paper.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
         }
 
         //------------------------------------------------------------------------
@@ -120,9 +124,12 @@ public class WallScript : MonoBehaviour
         if (collision.gameObject.tag == "Bubble3")
         {
             Bubble3.SetActive(false);
+            Paper.SetActive(false);
             Ball3.SetActive(true);
             Ball3.transform.position = new Vector3(-0.08f, 1.114f, -0.84f);
             Ball3.transform.rotation = Quaternion.identity;
+
+            
         }
     }
 }
