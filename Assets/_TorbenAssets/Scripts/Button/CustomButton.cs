@@ -16,9 +16,9 @@ public class CustomButton : MonoBehaviour
 	[SerializeField] LayerMask buttonLayer;
 	[SerializeField] private GameObject frame;
 
-	[Range(0.1f, 1f)]
+	[Range(0.1f, 10f)]
 	[SerializeField] private float timeToGoDown = 0.1f;
-	[Range(0.1f, 1f)]
+	[Range(0.1f, 10f)]
 	[SerializeField] private float timeToGoUp = 0.1f;
 
 	public UnityEvent onPress;
