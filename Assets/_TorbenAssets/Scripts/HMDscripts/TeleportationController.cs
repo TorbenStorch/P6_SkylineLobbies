@@ -73,6 +73,9 @@ public class TeleportationController: MonoBehaviour
         _teleportActivate.performed -= OnTeleportActivate;
         _teleportCancel.performed -= OnTeleportCancel;
     }
+    
+
+
     //We use the Update function to check for when a teleportation event has occured. 
     //The checks needed to ensure a succesful teleport event are
     //-Teleporting is currently active

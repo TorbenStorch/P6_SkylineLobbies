@@ -46,7 +46,7 @@ public class Whiteboard : MonoBehaviour
 
 	public void Start()
 	{
-		if (PhotonNetwork.InRoom && photonView.IsMine      && PhotonNetwork.IsMasterClient) //TEST MASTER CLIENT
+		if (PhotonNetwork.InRoom && photonView.IsMine      /*&& PhotonNetwork.IsMasterClient*/) //TEST MASTER CLIENT
 			photonView.RPC("Setup", RpcTarget.AllBuffered);
 		else if (!PhotonNetwork.InRoom)
 			Setup();
