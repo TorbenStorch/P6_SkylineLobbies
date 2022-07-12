@@ -18,7 +18,7 @@ public class CaveDrawing : MonoBehaviour
 
 	private void Start()
 	{
-		if (!targetHand) Debug.LogWarning("No Target Hand in CaveDrawing!");
+		//if (!targetHand) Debug.LogWarning("No Target Hand in CaveDrawing!");
 	}
 	private void Update()
 	{

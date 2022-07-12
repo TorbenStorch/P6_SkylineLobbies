@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: ProjectOne
   m_EditorClassIdentifier: 
   projectName: Project1
-  sceneToLoadWhenJoinedProject: 2
+  sceneToLoadWhenJoinedProject: 0
