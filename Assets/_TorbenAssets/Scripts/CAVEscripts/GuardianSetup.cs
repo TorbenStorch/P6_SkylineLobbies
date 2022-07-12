@@ -1,32 +1,36 @@
 ﻿/*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 09-06-2022
+last change: 10-07-2022
 Topic: Script for Cube-Shaped-CAVE-Guardian setup
 ---------------------------------------------------------*/
 
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GuardianSetup : MonoBehaviour //currently only for one tracker (maybe needs more later on)
 {
 	#region Data
 	//Position
-	Vector3 centerPosition;
 	Vector3 leftBorder, frontBorder, rightBorder, bufferBorder;
-	int state = 0;
+	int state = 1;
 	[SerializeField] int secondsToWaitForCalibration;
 	bool guardianSet;
 	float bufferBorderDifference;
 	float frontBorderStart, leftBorderStart, rightBorderStart;
 	bool buttonPressedFlag = false;
-
+	bool left, front, right;
 	//Color
-	Color near = new Color(1, 0, 0, 1);
-	Color far = new Color(0, 0, 0, 0);
+	Color near = new Color(1, 1, 1, 1);
+	Color far = new Color(1, 1, 1, 0f);
 	Color borderColorLeft, borderColorFront, borderColorRight;
-	public GameObject borderObjLeft, borderObjFront, borderObjRight;
+	//public GameObject borderObjLeft, borderObjFront, borderObjRight; //change to canvas!
+	public Image leftUp, leftDown, middleUp, middleDown, rightUp, rightDown;
+
+	[Header("The first Item will be used to calibrate the guardian!")]
+	[SerializeField] GameObject[] targets;
 	#endregion
 
 	#region Default Border & Update
@@ -43,7 +47,6 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 
 	void DefaultBorders()
 	{
-		centerPosition = this.transform.position;
 		leftBorder = new Vector3(-10, 0, 0);
 		frontBorder = new Vector3(0, 0, 10);
 		rightBorder = new Vector3(10, 0, 0);
@@ -53,9 +56,18 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 		frontBorderStart = frontBorder.z;
 		rightBorderStart = rightBorder.x;
 
-		borderObjLeft.GetComponent<Renderer>().material.color = far;
-		borderObjFront.GetComponent<Renderer>().material.color = far;
-		borderObjRight.GetComponent<Renderer>().material.color = far;
+		//borderObjLeft.GetComponent<Renderer>().material.color = far;
+		//borderObjFront.GetComponent<Renderer>().material.color = far;
+		//borderObjRight.GetComponent<Renderer>().material.color = far;
+
+		leftUp.color = far;
+		leftDown.color = far;
+		middleUp.color = far;
+		middleDown.color = far;
+		rightUp.color = far;
+		rightDown.color = far;
+
+
 	}
 	#endregion
 
@@ -70,9 +82,6 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 			StartCoroutine(SetPostitons(state));
 			switch (state)
 			{
-				case 0:
-					Debug.Log("Wait " + secondsToWaitForCalibration + " seconds, Start Position will be set");
-					break;
 				case 1:
 					Debug.Log("Wait " + secondsToWaitForCalibration + " seconds, Left Border will be set");
 					break;
@@ -94,7 +103,7 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 		{
 			Debug.Log("GUARDIAN RESET");
 			guardianSet = false;
-			state = 0;
+			state = 1;
 			DefaultBorders();
 		}
 	}
@@ -104,24 +113,20 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 		buttonPressedFlag = false;
 		switch (currentState) //set the center & border positions to the point where the tracker is after the delay
 		{
-			case 0:
-				centerPosition = transform.position;
-				Debug.Log("StartPos:" + centerPosition);
-				break;
 			case 1:
-				leftBorder = transform.position;
+				leftBorder = targets[0].transform.position;
 				Debug.Log("l_Pos:" + leftBorder);
 				break;
 			case 2:
-				frontBorder = transform.position;
+				frontBorder = targets[0].transform.position;
 				Debug.Log("f_Pos:" + frontBorder);
 				break;
 			case 3:
-				rightBorder = transform.position;
+				rightBorder = targets[0].transform.position;
 				Debug.Log("r_Pos:" + rightBorder);
 				break;
 			case 4:
-				bufferBorder = transform.position;
+				bufferBorder = targets[0].transform.position;
 				Debug.Log("buffer_Pos:" + bufferBorder);
 				guardianSet = true;
 
@@ -143,50 +148,66 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 	#region CheckDistance
 	void CalculateAlpha() //set the color of the corresponding border to a lerp from near to far color
 	{
-		if (transform.position.x <= leftBorderStart)
+		left = false;
+		right = false;
+		front = false;
+		for (int i = 0; i < targets.Length; i++)
 		{
-			float lerp = MapValue(transform.position.x, leftBorder.x, leftBorderStart, 0f, 1f);
-			Color lerpColor = Color.Lerp(near, far, lerp);
-			Debug.LogWarning("LEFT");
-			borderColorLeft = lerpColor;
+			if (targets[i].transform.position.x <= leftBorderStart)
+			{
+				float lerp = MapValue(targets[i].transform.position.x, leftBorder.x, leftBorderStart, 0f, 1f);
+				Color lerpColor = Color.Lerp(near, far, lerp);
+				Debug.LogWarning("LEFT");
+				left = true;
+				borderColorLeft = lerpColor;
+			}
+			if (targets[i].transform.position.x >= rightBorderStart)
+			{
+				float lerp = MapValue(targets[i].transform.position.x, rightBorder.x, rightBorderStart, 0f, 1f);
+				Color lerpColor = Color.Lerp(near, far, lerp);
+				Debug.LogWarning("RIGHT");
+				right = true;
+				borderColorRight = lerpColor;
+			}
+			if (targets[i].transform.position.z >= frontBorderStart)
+			{
+				float lerp = MapValue(targets[i].transform.position.z, frontBorder.z, frontBorderStart, 0f, 1f);
+				Color lerpColor = Color.Lerp(near, far, lerp);
+				Debug.LogWarning("FRONT");
+				front = true;
+				borderColorFront = lerpColor;
+			}
 		}
-		else
-		{
+		if (!left)
 			borderColorLeft = far;
-		}
-		if (transform.position.x >= rightBorderStart)
-		{
-			float lerp = MapValue(transform.position.x, rightBorder.x, rightBorderStart, 0f, 1f);
-			Color lerpColor = Color.Lerp(near, far, lerp);
-			Debug.LogWarning("RIGHT");
-			borderColorRight = lerpColor;
-		}
-		else
-		{
+		if (!right)
 			borderColorRight = far;
-		}
-		if (transform.position.z >= frontBorderStart)
-		{
-			float lerp = MapValue(transform.position.z, frontBorder.z, frontBorderStart, 0f, 1f);
-			Color lerpColor = Color.Lerp(near, far, lerp);
-			Debug.LogWarning("FRONT");
-			borderColorFront = lerpColor;
-		}
-		else
-		{
+		if (!front)
 			borderColorFront = far;
-		}
 	}
 
 	void SetColorForBorder()
 	{
 		if (guardianSet)
 		{
-			borderObjLeft.GetComponent<Renderer>().material.color = borderColorLeft;
-			borderObjFront.GetComponent<Renderer>().material.color = borderColorFront;
-			borderObjRight.GetComponent<Renderer>().material.color = borderColorRight;
+			//borderObjLeft.GetComponent<Renderer>().material.color = borderColorLeft;
+			//borderObjFront.GetComponent<Renderer>().material.color = borderColorFront;
+			//borderObjRight.GetComponent<Renderer>().material.color = borderColorRight;
+
+
+			leftUp.color = borderColorLeft;
+			leftDown.color = borderColorLeft;
+			middleUp.color = borderColorFront;
+			middleDown.color = borderColorFront;
+			rightUp.color = borderColorRight;
+			rightDown.color = borderColorRight;
+
 		}
 	}
+
+
+
+
 
 	// TrackerPos, borderPos, borderPos+buffer, colorIntesity 0, colorIntesity 1 
 	float MapValue(float mainValue, float inValueMin, float inValueMax, float outValueMin, float outValueMax)
@@ -196,12 +217,12 @@ public class GuardianSetup : MonoBehaviour //currently only for one tracker (may
 
 	void OnDrawGizmos() //just for Scene debugging
 	{
-		Gizmos.color = borderColorLeft;
-		Gizmos.DrawLine(transform.position, leftBorder);
-		Gizmos.color = borderColorFront;
-		Gizmos.DrawLine(transform.position, frontBorder);
-		Gizmos.color = borderColorRight;
-		Gizmos.DrawLine(transform.position, rightBorder);
+		//Gizmos.color = borderColorLeft;
+		//Gizmos.DrawLine(transform.position, leftBorder);
+		//Gizmos.color = borderColorFront;
+		//Gizmos.DrawLine(transform.position, frontBorder);
+		//Gizmos.color = borderColorRight;
+		//Gizmos.DrawLine(transform.position, rightBorder);
 
 		Gizmos.color = Color.yellow;
 		Gizmos.DrawLine((new Vector3(leftBorderStart, 0, 10)), (new Vector3(leftBorderStart, 0, -10)));

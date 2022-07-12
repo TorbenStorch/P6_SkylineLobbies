@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 09-06-2022
+last change: 10-07-2022
 Topic: Script to map the head-model onto the VR Camera Transform
 ---------------------------------------------------------*/
 using System.Collections;
@@ -13,6 +13,8 @@ public class MapObjectToTarget : MonoBehaviour
 {
 	[SerializeField] Transform targetTransform;
 	[SerializeField] PhotonView photonView;
+
+	[SerializeField] bool mapRotationAsWell;
 	void Update()
 	{
 		if (photonView.IsMine)
@@ -21,6 +23,7 @@ public class MapObjectToTarget : MonoBehaviour
 	void MapPosition(Transform target, Transform rigTransform)
 	{
 		target.position = rigTransform.position;
-		target.rotation = rigTransform.rotation;
+		if (mapRotationAsWell)
+			target.rotation = rigTransform.rotation;
 	}
 }
