@@ -590,7 +590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   texture: {fileID: 0}
-  sizeOfTexture: 300
+  sizeOfTexture: 450
   textureSize: {x: 2048, y: 2048}
   photonView: {fileID: 2993794013820498322}
 --- !u!114 &1151419485

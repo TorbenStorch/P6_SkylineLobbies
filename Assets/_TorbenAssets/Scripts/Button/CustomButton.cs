@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-Last change: 03-07-2022
+last change: 03-07-2022
 Topic: Custom Button
 ---------------------------------------------------------*/
 using System.Collections;

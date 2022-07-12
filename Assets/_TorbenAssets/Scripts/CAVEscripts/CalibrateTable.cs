@@ -1,7 +1,7 @@
 /*-------------------------------------------------------
 Creator: Torben Storch
 Expanded Realities P6
-last change: 03-07-2022
+last change: 12-07-2022
 Topic: Script for Calibrating and Set TablePosition
 ---------------------------------------------------------*/
 using System.Collections;
@@ -20,9 +20,15 @@ public class CalibrateTable : MonoBehaviour //Script is placed on Table Parent
 		if (!target_ControllerDrawPoint) target_ControllerDrawPoint = GameObject.FindGameObjectWithTag("ControllerDrawPoint");
 		if (Input.GetKeyDown(KeyCode.T) && target_ControllerDrawPoint ) 
 		{
-			photonView.RequestOwnership();
-			gameObject.transform.position = target_ControllerDrawPoint.transform.position; 
+			CalibrateTableCall();
 		}
+	}
+
+	public void CalibrateTableCall()
+	{
+		if (!target_ControllerDrawPoint) return;
+		photonView.RequestOwnership();
+		gameObject.transform.position = target_ControllerDrawPoint.transform.position;
 	}
 }
 
