@@ -1,3 +1,11 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Scrapped script I didn't use in the end 
+(used for toggling between being able to restrict the z axis of the bubble sprite object and being able to turn off the restriction to grab it and pull it out)
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

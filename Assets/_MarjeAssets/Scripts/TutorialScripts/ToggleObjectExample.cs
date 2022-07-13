@@ -1,3 +1,12 @@
+
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Spawns InfoBubble and Paper Sprites very far away 
+(not at start like in BubbleToggle script but after they are pulled out of the wall)
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

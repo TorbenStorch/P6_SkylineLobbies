@@ -1,3 +1,11 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Movement Script I whipped up from a tutorial that was just for testing 
+(not very good because the rotation always stays the same even though the user rotates his head)
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

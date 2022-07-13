@@ -1,3 +1,11 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Toggling the InfoBubble Sprite between set active true and false; also setting the position of the paper to it's position;
+also spawning the Sprites of Paper and Bubble very far away so they don't look bad in the beginning
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -52,6 +60,7 @@ public class BubbleToggle : MonoBehaviour
     {
         bool isActive = !InfoBubble1.activeSelf;
         InfoBubble1.SetActive(isActive);
+        Debug.Log("BubbleToggle");
 
         Paper1.transform.position = InfoBubble1.transform.position;
         //gameObject.SetActive(true);
@@ -63,6 +72,7 @@ public class BubbleToggle : MonoBehaviour
     {
         bool isActive = !InfoBubble2.activeSelf;
         InfoBubble2.SetActive(isActive);
+        Debug.Log("BubbleToggle");
 
         Paper2.transform.position = InfoBubble2.transform.position;
           
@@ -72,6 +82,7 @@ public class BubbleToggle : MonoBehaviour
     {
         bool isActive = !InfoBubble3.activeSelf;
         InfoBubble3.SetActive(isActive);
+        Debug.Log("BubbleToggle");
 
         Paper3.transform.position = InfoBubble3.transform.position;
 
