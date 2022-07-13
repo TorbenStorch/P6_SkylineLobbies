@@ -35,18 +35,20 @@ public class WallScript : MonoBehaviour
     private float Bubble2Z = /*-0.5f*/1.267943f;
     //Blubble3
     private float Bubble3X = /*-0.08f*/-2.67593f;
-    private float Bubble3Z = /*-0.84f*/1.267943f; 
+    private float Bubble3Z = /*-0.84f*/1.267943f;
+
+    private float Paper1XPosition;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        Paper1XPosition = Paper1.transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Paper1.transform.position = new Vector3(Paper1XPosition, Paper1.transform.position.y, Paper1.transform.position.z);
     }
 
     void OnCollisionEnter(Collision collision)
