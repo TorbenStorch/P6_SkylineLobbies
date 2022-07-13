@@ -1,3 +1,11 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Script for VR Hand Andimations I copied from a tutorial
+(put extra comments so I understand it better looking back on it)
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -27,8 +35,8 @@ public class Hand :  MonoBehaviour
         //Call InputDevices to see if it can find any devices with the characteristics we're looking for
         InputDevices.GetDevicesWithCharacteristics(inputDeviceCharacteristics, devices);
 
-        //Our hands might not be active and so they will not be generated from the search.
-        //We check if any devices are found here to avoid errors.
+        //Our hands might not be active and so they will not be generated from the search
+        //We check if any devices are found here to avoid errors
         if (devices.Count > 0)
         {
             
@@ -40,10 +48,10 @@ public class Hand :  MonoBehaviour
     }
 
 
-    // Update is called once per frame
+   
     private void Update()
     {
-        //Since our target device might not register at the start of the scene, we continously check until one is found.
+        //Since our target device might not register at the start of the scene, we continously check until one is found
         if(!_targetDevice.isValid)
         {
             InitializeHand();

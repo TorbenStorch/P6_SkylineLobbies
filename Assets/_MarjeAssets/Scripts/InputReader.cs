@@ -1,3 +1,10 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Input Reader to read the input of the controllers I copied from a Tutorial -> Scrapped in the end but helpful in the beginning 
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

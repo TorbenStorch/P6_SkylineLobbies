@@ -1,3 +1,12 @@
+/*-------------------------------------------------------
+Creator: Marje-Alicia Harms
+Expanded Realities P6
+last change: 13-07-2022
+Topic: Toggling the Paper Sprite between set active true and false
+(didn't do it in one script with the infobubble because they need to turn off and on asynchronous and this was the first way that came to mind)
+(-> basically not pretty but fast solution)
+---------------------------------------------------------*/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -34,7 +43,8 @@ public class InfoToggle : MonoBehaviour
     {
         bool isActive = !Paper1.activeSelf;
         Paper1.SetActive(isActive);
-        
+        Debug.Log("TogglePaper");
+
         //InfoBubble1.transform.position = Paper.transform.position;
         //this.transform.position = new Vector3(0, 0, 0); //not even a toggle anymore but I gave up to do it the complicated way
     }
@@ -43,6 +53,7 @@ public class InfoToggle : MonoBehaviour
     {
         bool isActive = !Paper2.activeSelf;
         Paper2.SetActive(isActive);
+        Debug.Log("TogglePaper");
 
         //InfoBubble1.transform.position = Paper.transform.position;
         //this.transform.position = new Vector3(0, 0, 0); //not even a toggle anymore but I gave up to do it the complicated way
@@ -52,6 +63,7 @@ public class InfoToggle : MonoBehaviour
     {
         bool isActive = !Paper3.activeSelf;
         Paper3.SetActive(isActive);
+        Debug.Log("TogglePaper");
 
         //InfoBubble1.transform.position = Paper.transform.position;
         //this.transform.position = new Vector3(0, 0, 0); //not even a toggle anymore but I gave up to do it the complicated way
