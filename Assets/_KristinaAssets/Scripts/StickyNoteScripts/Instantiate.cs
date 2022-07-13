@@ -13,6 +13,7 @@ public class Instantiate : MonoBehaviour
         //GameObject newNote = Instantiate(stickyNotePrefab) as GameObject;
 
         GameObject newNote = PhotonNetwork.Instantiate(stickyNotePrefab.name, transform.position, Quaternion.identity);
+        newNote.GetComponent<OwnershipTransfer>().TransferOwnership(newNote.GetComponent<PhotonView>());
         newNote.transform.SetParent(startingCanvas.transform, false);
 
         StickyNoteManager.Instance.selectedObject = newNote; //now its selected
