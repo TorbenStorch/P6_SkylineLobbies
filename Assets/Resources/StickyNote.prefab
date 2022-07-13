@@ -235,6 +235,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2761470859543124019}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2993794013820498322}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls:
@@ -318,6 +330,7 @@ GameObject:
   - component: {fileID: 2993794013820498325}
   - component: {fileID: 2993794013820498323}
   - component: {fileID: 1151419485}
+  - component: {fileID: 2761470859543124019}
   m_Layer: 0
   m_Name: StickyNote
   m_TagString: Whiteboard
@@ -464,7 +477,19 @@ MonoBehaviour:
       m_Calls: []
   m_SelectEntered:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2761470859543124019}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 2993794013820498322}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
       m_Calls: []
@@ -606,3 +631,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rayOrigin: {fileID: 1024917155}
+--- !u!114 &2761470859543124019
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2993794013820498328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
