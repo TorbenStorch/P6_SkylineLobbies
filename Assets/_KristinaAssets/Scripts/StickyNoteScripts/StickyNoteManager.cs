@@ -9,7 +9,7 @@ public class StickyNoteManager : MonoBehaviour
 
 
     //referenced in Instantiate script. ; puts the instantiated sticky note prefab in the inspector when instantiated, then later referenced to transfer to the whiteborard
-    public GameObject selectedObject;
+    [HideInInspector]public GameObject selectedObject;
 
 
 
