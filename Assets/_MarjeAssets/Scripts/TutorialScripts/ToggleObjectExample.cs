@@ -11,7 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Photon.Pun;
+//using Photon.Pun;
 
 public class ToggleObjectExample : MonoBehaviour
 {
@@ -30,16 +30,16 @@ public class ToggleObjectExample : MonoBehaviour
     private float away = 1000f;
 
     //photonview
-    [SerializeField] PhotonView photonView;
+    //[SerializeField] PhotonView photonView;
 
 
 
     private void Awake()
     {
-        if (!photonView.IsMine)
-        {
-            return;
-        }
+        //if (!photonView.IsMine)
+        //{
+        //    return;
+        //}
 
         toggleReference.action.started += Toggle1;
         toggleReference.action.started += Toggle2;

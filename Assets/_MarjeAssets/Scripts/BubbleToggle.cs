@@ -10,7 +10,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using Photon.Pun;
+//using Photon.Pun;
 
 
 public class BubbleToggle : MonoBehaviour
@@ -30,14 +30,14 @@ public class BubbleToggle : MonoBehaviour
     private float far = 1000f;
     private float away = 1000f;
 
-    [SerializeField] PhotonView photonView;
+    //[SerializeField] PhotonView photonView;
 
     private void Awake()
     {
-        if (!photonView.IsMine)
-        {
-            return;
-        }
+        //if (!photonView.IsMine)
+        //{
+        //    return;
+        //}
 
         //spawn far away so if user already presses secondary button or K it doesn't look bad
         Paper1.transform.position = new Vector3(very, far, away);
