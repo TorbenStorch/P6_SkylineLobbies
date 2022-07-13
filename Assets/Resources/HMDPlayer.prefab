@@ -3063,7 +3063,7 @@ GameObject:
   - component: {fileID: 5215036637000700577}
   - component: {fileID: 5215036637000700576}
   - component: {fileID: 5215036637000700579}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RightHand Interactor Ray
   m_TagString: Untagged
   m_Icon: {fileID: 0}

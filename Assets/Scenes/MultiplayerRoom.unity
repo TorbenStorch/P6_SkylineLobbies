@@ -5054,6 +5054,7 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 7910319708019206698}
 --- !u!114 &698693579133640131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6170,6 +6171,7 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 8571994341156357856}
 --- !u!222 &1935958277581537060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6430,6 +6432,7 @@ MonoBehaviour:
   InfoBubble1: {fileID: 6872113376071785297}
   InfoBubble2: {fileID: 6872113376096747678}
   InfoBubble3: {fileID: 6872113376812059996}
+  photonView: {fileID: 8571994341156357856}
 --- !u!33 &2158699251112330368
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7672,6 +7675,7 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 7910319708019206698}
 --- !u!114 &4514101379418136422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13503,6 +13507,7 @@ MonoBehaviour:
   Paper1: {fileID: 0}
   Paper2: {fileID: 0}
   Paper3: {fileID: 0}
+  photonView: {fileID: 0}
 --- !u!114 &5445993066129696781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14286,6 +14291,7 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 8951762940678912357}
 --- !u!114 &6167839804276028788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14448,6 +14454,7 @@ MonoBehaviour:
   InfoBubble1: {fileID: 6872113376071785297}
   InfoBubble2: {fileID: 6872113376096747678}
   InfoBubble3: {fileID: 6872113376812059996}
+  photonView: {fileID: 8951762940678912357}
 --- !u!1001 &6470517344870420500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15696,7 +15703,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113375597924195}
@@ -16074,7 +16081,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113376071785313}
@@ -16389,7 +16396,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113376096747689}
@@ -16570,6 +16577,7 @@ GameObject:
   - component: {fileID: 4465990503935374818}
   - component: {fileID: 7910319708019206697}
   - component: {fileID: 638289307395629967}
+  - component: {fileID: 7910319708019206698}
   m_Layer: 0
   m_Name: InfoBubble3
   m_TagString: Untagged
@@ -16723,6 +16731,7 @@ GameObject:
   - component: {fileID: 8951762940678912356}
   - component: {fileID: 6153254768751577515}
   - component: {fileID: 6331373539504987845}
+  - component: {fileID: 8951762940678912357}
   m_Layer: 0
   m_Name: InfoBubble2
   m_TagString: Untagged
@@ -17438,7 +17447,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113376812060003}
@@ -17752,7 +17761,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113376967841011}
@@ -17821,6 +17830,7 @@ GameObject:
   - component: {fileID: 8571994341156357855}
   - component: {fileID: 1722336217156379654}
   - component: {fileID: 2129324861578682393}
+  - component: {fileID: 8571994341156357856}
   m_Layer: 0
   m_Name: InfoBubble
   m_TagString: Untagged
@@ -18102,7 +18112,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 6872113377282417241}
@@ -18480,7 +18490,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 7134378083212240269}
@@ -18965,6 +18975,29 @@ MonoBehaviour:
   InfoBubble1: {fileID: 6872113376071785297}
   InfoBubble2: {fileID: 6872113376096747678}
   InfoBubble3: {fileID: 6872113376812059996}
+  photonView: {fileID: 7910319708019206698}
+--- !u!114 &7910319708019206698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872113376208840555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 21
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &7928816576544912896
 GameObject:
   m_ObjectHideFlags: 0
@@ -21527,6 +21560,29 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 8571994341156357856}
+--- !u!114 &8571994341156357856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872113376970952822}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 19
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!114 &8599348207197839163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21615,7 +21671,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 8608136313352315736}
@@ -21741,6 +21797,29 @@ MonoBehaviour:
   Paper1: {fileID: 1245454343918455483}
   Paper2: {fileID: 3982593492910901812}
   Paper3: {fileID: 4623154618051900239}
+  photonView: {fileID: 8951762940678912357}
+--- !u!114 &8951762940678912357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6872113376342876780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 20
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &9011836883399741092
 GameObject:
   m_ObjectHideFlags: 0
@@ -21829,7 +21908,7 @@ MonoBehaviour:
   Group: 0
   prefixField: -1
   Synchronization: 3
-  OwnershipTransfer: 0
+  OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
   - {fileID: 9102411759325058702}

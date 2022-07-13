@@ -11,6 +11,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Photon.Pun;
 
 public class InfoToggle : MonoBehaviour
 {
@@ -22,9 +23,14 @@ public class InfoToggle : MonoBehaviour
     //public GameObject InfoBubble1;
 
 
+    [SerializeField] PhotonView photonView;
 
     private void Awake()
     {
+        if (!photonView.IsMine)
+        {
+            return;
+        }
         toggleReference.action.started += Toggle1;
         toggleReference.action.started += Toggle2;
         toggleReference.action.started += Toggle3;
