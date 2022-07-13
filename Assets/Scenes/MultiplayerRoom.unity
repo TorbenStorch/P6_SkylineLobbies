@@ -5048,12 +5048,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 6872113376071785297}
-  Infobubble2: {fileID: 6872113376096747678}
-  Infobubble3: {fileID: 6872113376812059996}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Infobubble1: {fileID: 1245454343918455483}
+  Infobubble2: {fileID: 3982593492910901812}
+  Infobubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!114 &698693579133640131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6167,9 +6167,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!222 &1935958277581537060
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -6424,12 +6424,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
-  InfoBubble1: {fileID: 6872113376071785297}
-  InfoBubble2: {fileID: 6872113376096747678}
-  InfoBubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 1245454343918455483}
+  InfoBubble2: {fileID: 3982593492910901812}
+  InfoBubble3: {fileID: 4623154618051900239}
 --- !u!33 &2158699251112330368
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -7669,9 +7669,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!114 &4514101379418136422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14283,9 +14283,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!114 &6167839804276028788
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14442,12 +14442,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
-  InfoBubble1: {fileID: 6872113376071785297}
-  InfoBubble2: {fileID: 6872113376096747678}
-  InfoBubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 1245454343918455483}
+  InfoBubble2: {fileID: 3982593492910901812}
+  InfoBubble3: {fileID: 4623154618051900239}
 --- !u!1001 &6470517344870420500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18959,12 +18959,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
-  InfoBubble1: {fileID: 6872113376071785297}
-  InfoBubble2: {fileID: 6872113376096747678}
-  InfoBubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 1245454343918455483}
+  InfoBubble2: {fileID: 3982593492910901812}
+  InfoBubble3: {fileID: 4623154618051900239}
 --- !u!1 &7928816576544912896
 GameObject:
   m_ObjectHideFlags: 0
@@ -21521,12 +21521,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 6872113376071785297}
-  Infobubble2: {fileID: 6872113376096747678}
-  Infobubble3: {fileID: 6872113376812059996}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Infobubble1: {fileID: 1245454343918455483}
+  Infobubble2: {fileID: 3982593492910901812}
+  Infobubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!114 &8599348207197839163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21735,12 +21735,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 6872113376071785297}
-  Infobubble2: {fileID: 6872113376096747678}
-  Infobubble3: {fileID: 6872113376812059996}
-  Paper1: {fileID: 1245454343918455483}
-  Paper2: {fileID: 3982593492910901812}
-  Paper3: {fileID: 4623154618051900239}
+  Infobubble1: {fileID: 1245454343918455483}
+  Infobubble2: {fileID: 3982593492910901812}
+  Infobubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 6872113376071785297}
+  Paper2: {fileID: 6872113376096747678}
+  Paper3: {fileID: 6872113376812059996}
 --- !u!1 &9011836883399741092
 GameObject:
   m_ObjectHideFlags: 0
