@@ -6512,6 +6512,7 @@ MonoBehaviour:
   stickyNotePrefab: {fileID: 8185627911387131244, guid: a52b2e17455fda04eaaf588637033a0d,
     type: 3}
   startingCanvas: {fileID: 5041500422147241328}
+  spawnPos: {fileID: 0}
 --- !u!224 &4264959648298294846
 RectTransform:
   m_ObjectHideFlags: 0

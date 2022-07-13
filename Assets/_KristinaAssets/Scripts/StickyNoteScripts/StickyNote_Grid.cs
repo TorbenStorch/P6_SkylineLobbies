@@ -7,8 +7,9 @@ public class StickyNote_Grid : MonoBehaviour
     
     [SerializeField] private GridNew newGrid; //the whiteboard is the new grid
     [SerializeField] private bool _start = false;
+	private float gridNumber = 0;
 
-    private void Update()
+	private void Update()
     {
         if (_start)
         {
@@ -24,10 +25,15 @@ public class StickyNote_Grid : MonoBehaviour
 
         GameObject thisNote = StickyNoteManager.Instance.selectedObject;
 
-        thisNote.transform.localPosition = newGrid.GridSnapPos(newGrid.RandomCanvasPos());
-        thisNote.transform.rotation = newGrid.transform.rotation;
+        //thisNote.transform.localPosition = newGrid.GridSnapPos(newGrid.RandomCanvasPos());
 
-        thisNote.transform.SetParent(newGrid.transform);
+        Vector3 pos = newGrid.transform.position + new Vector3(0,0,gridNumber);
+        gridNumber -= thisNote.transform.localScale.z * 4.5f;
+        thisNote.transform.position = pos;
+        //thisNote.transform.rotation = newGrid.transform.rotation;
+        thisNote.transform.rotation = Quaternion.Euler(0,0,90);
+        //thisNote.transform.SetParent(newGrid.transform);
+
 
     }
 
