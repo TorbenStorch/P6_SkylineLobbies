@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 5570087107688307975}
   - component: {fileID: 5570087107688308026}
   - component: {fileID: 5570087107688308027}
-  - component: {fileID: 7967888740307557885}
   - component: {fileID: 8042722196602834253}
   - component: {fileID: 5864950404970183769}
   - component: {fileID: 160281019268285743}
+  - component: {fileID: 1861399094405848210}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Interactable
@@ -162,6 +162,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 160281019268285743}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 8042722196602834253}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
@@ -200,9 +212,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7967888740307557885}
-        m_TargetAssemblyTypeName: InstantiationManagerVR, Assembly-CSharp
-        m_MethodName: SphereInstantiation
+      - m_Target: {fileID: 1861399094405848210}
+        m_TargetAssemblyTypeName: SphereInstantiation, Assembly-CSharp
+        m_MethodName: SphereCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -212,45 +224,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 5570087107688308026}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 160281019268285743}
-        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
-        m_MethodName: TransferOwnership
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 8042722196602834253}
-          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5570087107688308026}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls:
@@ -347,25 +323,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &7967888740307557885
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5570087107688307968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1e3b96b874061409ce5ea435155ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCube: {fileID: 5261798888154386402, guid: bd08cf0ee15d0cd4a9d229170a3a915f, type: 3}
-  mySphere: {fileID: 5570087107688307968}
-  myCapsule: {fileID: 7714865427650777347, guid: f11f9b53564e06347abcd0d9babdd1c3,
-    type: 3}
-  myCylinder: {fileID: 557448228866729222, guid: c6de67a8ae76e0e47bf8567a2fe31f61,
-    type: 3}
-  photonView: {fileID: 8042722196602834253}
 --- !u!114 &8042722196602834253
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,3 +374,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1861399094405848210
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5570087107688307968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6a94604833357a44a65275cdb808b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mySphere: {fileID: 5570087107688307968}
+  sphereHasSpawned: 0
+  photonView: {fileID: 8042722196602834253}
