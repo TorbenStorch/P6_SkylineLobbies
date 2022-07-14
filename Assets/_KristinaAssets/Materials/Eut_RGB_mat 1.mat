@@ -20,7 +20,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eut_RGB_mat
+  m_Name: Eut_RGB_mat 1
   m_Shader: {fileID: -6465566751694194690, guid: b8128078b8e223d4fb962fdf49e088d6,
     type: 3}
   m_ValidKeywords: []
@@ -113,7 +113,7 @@ Material:
     - _Glossiness: 0
     - _GlossyReflections: 0
     - _Metallic: 0
-    - _Noise_Rotation_Speed: 14.69
+    - _Noise_Rotation_Speed: 14.15
     - _OcclusionStrength: 1
     - _Parallax: 0.005
     - _QueueControl: 0
@@ -123,7 +123,7 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _Star_Offset: 0.97
+    - _Star_Offset: 0.8
     - _Surface: 0
     - _WorkflowMode: 1
     - _ZWrite: 1
@@ -134,7 +134,7 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Fresnel_Color: {r: 0.000024741385, g: 0.00021038562, b: 0.0005619841, a: 1}
-    - _Noise_Scale: {r: 2, g: 1, b: 0, a: 0}
+    - _Noise_Scale: {r: 1, g: 1, b: 0, a: 0}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
     - _Star_Color: {r: 1, g: 0.84313726, b: 0, a: 0}
   m_BuildTextureStacks: []
