@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 2073922168986075241}
   - component: {fileID: 1123565271018516327}
   - component: {fileID: 7024291861577015861}
-  - component: {fileID: 7347594885127897168}
   - component: {fileID: 5955733222979495204}
   - component: {fileID: 7401286901882105791}
   - component: {fileID: 2214941273814498450}
+  - component: {fileID: 6732509768766181366}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Interactable
@@ -163,6 +163,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2214941273814498450}
+        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
+        m_MethodName: TransferOwnership
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 5955733222979495204}
+          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
@@ -201,9 +213,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7347594885127897168}
-        m_TargetAssemblyTypeName: InstantiationManagerVR, Assembly-CSharp
-        m_MethodName: CylinderInstantiation
+      - m_Target: {fileID: 6732509768766181366}
+        m_TargetAssemblyTypeName: CylinderInstantiation, Assembly-CSharp
+        m_MethodName: CylinderCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -213,45 +225,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1123565271018516327}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2214941273814498450}
-        m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
-        m_MethodName: TransferOwnership
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 5955733222979495204}
-          m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
   m_SelectExited:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1123565271018516327}
-        m_TargetAssemblyTypeName: UnityEngine.Rigidbody, UnityEngine
-        m_MethodName: set_isKinematic
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_Activated:
     m_PersistentCalls:
       m_Calls:
@@ -348,25 +324,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &7347594885127897168
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1e3b96b874061409ce5ea435155ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCube: {fileID: 5261798888154386402, guid: bd08cf0ee15d0cd4a9d229170a3a915f, type: 3}
-  mySphere: {fileID: 5570087107688307968, guid: a37663ab2f6d50a418ccf3e1d5d2d5d1,
-    type: 3}
-  myCapsule: {fileID: 7714865427650777347, guid: f11f9b53564e06347abcd0d9babdd1c3,
-    type: 3}
-  myCylinder: {fileID: 557448228866729222}
-  photonView: {fileID: 5955733222979495204}
 --- !u!114 &5955733222979495204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -418,3 +375,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6732509768766181366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557448228866729222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ec83905c30b394cbc69167b275459c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCylinder: {fileID: 557448228866729222}
+  cylinderHasSpawned: 0
+  photonView: {fileID: 5955733222979495204}

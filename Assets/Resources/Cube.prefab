@@ -14,10 +14,10 @@ GameObject:
   - component: {fileID: 8096447934552073390}
   - component: {fileID: 4696002018870220290}
   - component: {fileID: 3849409113202296230}
-  - component: {fileID: 2216462661282256400}
   - component: {fileID: 7236339590264071066}
   - component: {fileID: 8227605356312694521}
   - component: {fileID: 8222517964467828684}
+  - component: {fileID: 4988028109426265037}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Interactable
@@ -212,9 +212,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2216462661282256400}
-        m_TargetAssemblyTypeName: InstantiationManagerVR, Assembly-CSharp
-        m_MethodName: CubeInstantiation
+      - m_Target: {fileID: 4988028109426265037}
+        m_TargetAssemblyTypeName: CubeInstantiation, Assembly-CSharp
+        m_MethodName: CubeCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -323,27 +323,6 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &2216462661282256400
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5e1e3b96b874061409ce5ea435155ff0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  myCube: {fileID: 5261798888154386402}
-  mySphere: {fileID: 5570087107688307968, guid: a37663ab2f6d50a418ccf3e1d5d2d5d1,
-    type: 3}
-  myCapsule: {fileID: 7714865427650777347, guid: f11f9b53564e06347abcd0d9babdd1c3,
-    type: 3}
-  myCylinder: {fileID: 557448228866729222, guid: c6de67a8ae76e0e47bf8567a2fe31f61,
-    type: 3}
-  cubeHasSpawned: 0
-  photonView: {fileID: 7236339590264071066}
 --- !u!114 &7236339590264071066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -395,3 +374,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4988028109426265037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5261798888154386402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ab83f3cb8c5d674883f43a81477140f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myCube: {fileID: 5261798888154386402}
+  cubeHasSpawned: 0
+  photonView: {fileID: 7236339590264071066}
