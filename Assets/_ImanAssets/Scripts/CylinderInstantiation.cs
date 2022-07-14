@@ -2,7 +2,7 @@
 Creator: Iman Nikkhahazad
 Expanded Realities P6
 last change: 14-07-2022
-Topic: Script for instantiate the Cylinder - Prototyping area 
+Topic: Script for instantiate the Cylinder - Prototyping area - CAVE side
 ---------------------------------------------------------*/
 
 using UnityEngine;
@@ -25,13 +25,13 @@ public class CylinderInstantiation : MonoBehaviour
 
         if (PhotonNetwork.InRoom && photonView.IsMine)
         {
-            PhotonNetwork.Instantiate("Cylinder", myCylinder.transform.position, myCylinder.transform.rotation);
+            PhotonNetwork.Instantiate("CAVECylinder", myCylinder.transform.position, myCylinder.transform.rotation);
             cylinderHasSpawned = true;
             Debug.Log("Cylinder in multiplayer scene has instantiated");
         }
         else if (!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(("Cylinder")), myCylinder.transform.position, myCylinder.transform.rotation);
+            Instantiate(Resources.Load(("CAVECylinder")), myCylinder.transform.position, myCylinder.transform.rotation);
             cylinderHasSpawned = true;
             Debug.Log("Cylinder in singleplayer scene has instantiated");
         }

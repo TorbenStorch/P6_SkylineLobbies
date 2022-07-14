@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &557448228866729222
+--- !u!1 &4796602695070446369
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7258439620116486193}
-  - component: {fileID: 5247762622094060996}
-  - component: {fileID: 3943179529042723221}
-  - component: {fileID: 2073922168986075241}
-  - component: {fileID: 1123565271018516327}
-  - component: {fileID: 7024291861577015861}
-  - component: {fileID: 5955733222979495204}
-  - component: {fileID: 7401286901882105791}
-  - component: {fileID: 2214941273814498450}
-  - component: {fileID: 6732509768766181366}
+  - component: {fileID: 7173995385999062709}
+  - component: {fileID: 7845152042350591795}
+  - component: {fileID: 7814625322753530739}
+  - component: {fileID: 4358669654922096939}
+  - component: {fileID: 3210914728380680650}
+  - component: {fileID: 6494479119808845018}
+  - component: {fileID: 3275897280487329549}
+  - component: {fileID: 6310833105256580947}
+  - component: {fileID: 6008229651585741661}
+  - component: {fileID: 2408453290163690627}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: VRCapsule
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7258439620116486193
+--- !u!4 &7173995385999062709
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.733, y: 1.201, z: -0.99025214}
+  m_LocalPosition: {x: -1.528, y: 0.95, z: 4.8667517}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &5247762622094060996
+--- !u!33 &7845152042350591795
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
-  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &3943179529042723221
+  m_GameObject: {fileID: 4796602695070446369}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7814625322753530739
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a, type: 2}
+  - {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,27 +90,27 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &2073922168986075241
+--- !u!136 &4358669654922096939
 CapsuleCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5000001
+  m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!54 &1123565271018516327
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!54 &3210914728380680650
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -120,13 +120,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &7024291861577015861
+--- !u!114 &6494479119808845018
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -138,7 +138,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 12
+    m_Bits: 68
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -150,12 +150,12 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3943179529042723221}
+      - m_Target: {fileID: 7814625322753530739}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 6360973f9d439fb4cbf8f99caff7aee3,
+          m_ObjectArgument: {fileID: 2100000, guid: cdeb1da618c9b1548a32c34debdb6647,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -163,12 +163,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 2214941273814498450}
+      - m_Target: {fileID: 6008229651585741661}
         m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
         m_MethodName: TransferOwnership
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 5955733222979495204}
+          m_ObjectArgument: {fileID: 3275897280487329549}
           m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -178,12 +178,12 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3943179529042723221}
+      - m_Target: {fileID: 7814625322753530739}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
+          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -200,22 +200,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3943179529042723221}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6732509768766181366}
-        m_TargetAssemblyTypeName: CylinderInstantiation, Assembly-CSharp
-        m_MethodName: CylinderCloning
+      - m_Target: {fileID: 2408453290163690627}
+        m_TargetAssemblyTypeName: VRCapsuleInstantiation, Assembly-CSharp
+        m_MethodName: VRCapsuleCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -230,36 +217,10 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3943179529042723221}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 23754c193f1a14347941c5a6c0b3fba7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 3943179529042723221}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -324,13 +285,13 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &5955733222979495204
+--- !u!114 &3275897280487329549
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -343,17 +304,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 7401286901882105791}
+  - {fileID: 6310833105256580947}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &7401286901882105791
+--- !u!114 &6310833105256580947
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -363,30 +324,30 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &2214941273814498450
+--- !u!114 &6008229651585741661
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6732509768766181366
+--- !u!114 &2408453290163690627
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 557448228866729222}
+  m_GameObject: {fileID: 4796602695070446369}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f1ec83905c30b394cbc69167b275459c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3e3b44e9aef72a14a888883e98cd3b81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCylinder: {fileID: 557448228866729222}
-  cylinderHasSpawned: 0
-  photonView: {fileID: 5955733222979495204}
+  myCapsule: {fileID: 4796602695070446369}
+  capsuleHasSpawned: 0
+  photonView: {fileID: 3275897280487329549}

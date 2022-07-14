@@ -18,8 +18,8 @@ MonoBehaviour:
   - InteractableClose
   - InteractableFar
   - PinAttach
-  - 
-  - 
+  - InteractableFarCAVE
+  - InteractableFarHMD
   - 
   - 
   - 

@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5261798888154386402
+--- !u!1 &6579744465421533834
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8221223176195673678}
-  - component: {fileID: 6370992527325530306}
-  - component: {fileID: 1623492599803513098}
-  - component: {fileID: 8096447934552073390}
-  - component: {fileID: 4696002018870220290}
-  - component: {fileID: 3849409113202296230}
-  - component: {fileID: 7236339590264071066}
-  - component: {fileID: 8227605356312694521}
-  - component: {fileID: 8222517964467828684}
-  - component: {fileID: 4988028109426265037}
+  - component: {fileID: 6943985908843397926}
+  - component: {fileID: 5341294987061478826}
+  - component: {fileID: 346097011351897186}
+  - component: {fileID: 7067842098218412486}
+  - component: {fileID: 6008317005704272746}
+  - component: {fileID: 2819677497206294734}
+  - component: {fileID: 8513769271619153650}
+  - component: {fileID: 6945689675540022161}
+  - component: {fileID: 6941762302822103716}
+  - component: {fileID: 4984620908382526921}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: VRCube
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &8221223176195673678
+--- !u!4 &6943985908843397926
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.093, y: 1.102, z: -1.054}
+  m_LocalPosition: {x: -1.528, y: 0.95, z: 4.0667515}
   m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &6370992527325530306
+--- !u!33 &5341294987061478826
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &1623492599803513098
+--- !u!23 &346097011351897186
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a, type: 2}
+  - {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,26 +90,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &8096447934552073390
+--- !u!65 &7067842098218412486
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &4696002018870220290
+--- !u!54 &6008317005704272746
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -119,13 +119,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &3849409113202296230
+--- !u!114 &2819677497206294734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -137,7 +137,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 12
+    m_Bits: 68
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -149,12 +149,12 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1623492599803513098}
+      - m_Target: {fileID: 346097011351897186}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 6360973f9d439fb4cbf8f99caff7aee3,
+          m_ObjectArgument: {fileID: 2100000, guid: cdeb1da618c9b1548a32c34debdb6647,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -162,12 +162,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8222517964467828684}
+      - m_Target: {fileID: 6941762302822103716}
         m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
         m_MethodName: TransferOwnership
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 7236339590264071066}
+          m_ObjectArgument: {fileID: 8513769271619153650}
           m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -177,12 +177,12 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1623492599803513098}
+      - m_Target: {fileID: 346097011351897186}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
+          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -199,22 +199,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1623492599803513098}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4988028109426265037}
-        m_TargetAssemblyTypeName: CubeInstantiation, Assembly-CSharp
-        m_MethodName: CubeCloning
+      - m_Target: {fileID: 4984620908382526921}
+        m_TargetAssemblyTypeName: VRCubeInstantiation, Assembly-CSharp
+        m_MethodName: VRCubeCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -229,36 +216,10 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1623492599803513098}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 23754c193f1a14347941c5a6c0b3fba7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1623492599803513098}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -323,13 +284,13 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &7236339590264071066
+--- !u!114 &8513769271619153650
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -342,17 +303,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 8227605356312694521}
+  - {fileID: 6945689675540022161}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &8227605356312694521
+--- !u!114 &6945689675540022161
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -362,30 +323,30 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &8222517964467828684
+--- !u!114 &6941762302822103716
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &4988028109426265037
+--- !u!114 &4984620908382526921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5261798888154386402}
+  m_GameObject: {fileID: 6579744465421533834}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7ab83f3cb8c5d674883f43a81477140f, type: 3}
+  m_Script: {fileID: 11500000, guid: 0291d64bfea7d0840b3328834ceeb16c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCube: {fileID: 5261798888154386402}
+  myCube: {fileID: 6579744465421533834}
   cubeHasSpawned: 0
-  photonView: {fileID: 7236339590264071066}
+  photonView: {fileID: 8513769271619153650}

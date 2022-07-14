@@ -28,7 +28,7 @@ public class WallScript : MonoBehaviour
     //Blubble2
     //commented numbers were for my scene
     private float BubbleX = /*0.307f*/ -2.67593f;
-    private float Bubble123Y = /*1.114f*/-0.6189399f; //the same for all 3
+    private float Bubble123Y = /*1.114f*/0.718f; //the same for all 3
     private float BubbleZ = /*-0.84f*/0.8809423f;
     //Blubble2
     private float Bubble2X = /*-0.08f*/-2.33593f; //the same for 2 and 3 in the test scene

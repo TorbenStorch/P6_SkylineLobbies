@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7714865427650777347
+--- !u!1 &701740435715282397
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,53 +8,53 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5336597662450324631}
-  - component: {fileID: 4998949065249479953}
-  - component: {fileID: 5040479971893901649}
-  - component: {fileID: 1584523192774169353}
-  - component: {fileID: 364567720625744872}
-  - component: {fileID: 8332019805631428344}
-  - component: {fileID: 357493835147144495}
-  - component: {fileID: 9085120278049318257}
-  - component: {fileID: 8854574461365997951}
-  - component: {fileID: 7724653021897809380}
+  - component: {fileID: 701740435715282393}
+  - component: {fileID: 701740435715282392}
+  - component: {fileID: 701740435715282395}
+  - component: {fileID: 701740435715282394}
+  - component: {fileID: 701740435715282407}
+  - component: {fileID: 701740435715282406}
+  - component: {fileID: 3129021779494929808}
+  - component: {fileID: 1555295287687197828}
+  - component: {fileID: 5100492878314049010}
+  - component: {fileID: 9139703202460222126}
   m_Layer: 0
-  m_Name: Capsule
+  m_Name: VRSphere
   m_TagString: Interactable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &5336597662450324631
+--- !u!4 &701740435715282393
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.083, y: 1.202, z: -1.054}
-  m_LocalScale: {x: 0.2, y: 0.2, z: 0.2}
+  m_LocalPosition: {x: -1.528, y: 0.95, z: 4.4667516}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &4998949065249479953
+--- !u!33 &701740435715282392
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
-  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &5040479971893901649
+  m_GameObject: {fileID: 701740435715282397}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &701740435715282395
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -68,7 +68,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a, type: 2}
+  - {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -90,27 +90,26 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &1584523192774169353
-CapsuleCollider:
+--- !u!135 &701740435715282394
+SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
+  serializedVersion: 2
   m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &364567720625744872
+--- !u!54 &701740435715282407
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -120,13 +119,13 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &8332019805631428344
+--- !u!114 &701740435715282406
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ad34abafad169848a38072baa96cdb2, type: 3}
@@ -138,7 +137,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_InteractionLayers:
-    m_Bits: 12
+    m_Bits: 68
   m_SelectMode: 0
   m_CustomReticle: {fileID: 0}
   m_FirstHoverEntered:
@@ -150,12 +149,12 @@ MonoBehaviour:
   m_HoverEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5040479971893901649}
+      - m_Target: {fileID: 701740435715282395}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 6360973f9d439fb4cbf8f99caff7aee3,
+          m_ObjectArgument: {fileID: 2100000, guid: cdeb1da618c9b1548a32c34debdb6647,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -163,12 +162,12 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8854574461365997951}
+      - m_Target: {fileID: 5100492878314049010}
         m_TargetAssemblyTypeName: OwnershipTransfer, Assembly-CSharp
         m_MethodName: TransferOwnership
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 357493835147144495}
+          m_ObjectArgument: {fileID: 3129021779494929808}
           m_ObjectArgumentAssemblyTypeName: Photon.Pun.PhotonView, PhotonUnityNetworking
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -178,12 +177,12 @@ MonoBehaviour:
   m_HoverExited:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5040479971893901649}
+      - m_Target: {fileID: 701740435715282395}
         m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
         m_MethodName: set_material
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
+          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
           m_IntArgument: 0
@@ -200,22 +199,9 @@ MonoBehaviour:
   m_SelectEntered:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5040479971893901649}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 670472e287133c949aa032a1cde67fa7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 7724653021897809380}
-        m_TargetAssemblyTypeName: CapsuleInstantiation, Assembly-CSharp
-        m_MethodName: CapsuleCloning
+      - m_Target: {fileID: 9139703202460222126}
+        m_TargetAssemblyTypeName: VRSphereInstantiation, Assembly-CSharp
+        m_MethodName: VRSphereCloning
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -230,36 +216,10 @@ MonoBehaviour:
       m_Calls: []
   m_Activated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5040479971893901649}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 23754c193f1a14347941c5a6c0b3fba7,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_Deactivated:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 5040479971893901649}
-        m_TargetAssemblyTypeName: UnityEngine.Renderer, UnityEngine
-        m_MethodName: set_material
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 2100000, guid: 426f4012200a717408261cb315b8a90a,
-            type: 2}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Material, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
   m_OnFirstHoverEntered:
     m_PersistentCalls:
       m_Calls: []
@@ -324,13 +284,13 @@ MonoBehaviour:
   m_ForceGravityOnDetach: 0
   m_RetainTransformParent: 1
   m_AttachPointCompatibilityMode: 0
---- !u!114 &357493835147144495
+--- !u!114 &3129021779494929808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
@@ -343,17 +303,17 @@ MonoBehaviour:
   OwnershipTransfer: 1
   observableSearch: 2
   ObservedComponents:
-  - {fileID: 9085120278049318257}
+  - {fileID: 1555295287687197828}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
---- !u!114 &9085120278049318257
+--- !u!114 &1555295287687197828
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 627855c7f81362d41938ffe0b1475957, type: 3}
@@ -363,30 +323,30 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
---- !u!114 &8854574461365997951
+--- !u!114 &5100492878314049010
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 021d0c3c9995e564a94c2311ffc3aec3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7724653021897809380
+--- !u!114 &9139703202460222126
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7714865427650777347}
+  m_GameObject: {fileID: 701740435715282397}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d83ead5ae59d1dc4e8002b7bef150cb7, type: 3}
+  m_Script: {fileID: 11500000, guid: e84d1e6fe5fa8c84ea6019c153dfee58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myCapsule: {fileID: 7714865427650777347}
-  capsuleHasSpawned: 0
-  photonView: {fileID: 357493835147144495}
+  mySphere: {fileID: 701740435715282397}
+  sphereHasSpawned: 0
+  photonView: {fileID: 3129021779494929808}

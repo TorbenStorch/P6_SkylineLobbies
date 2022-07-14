@@ -2,7 +2,7 @@
 Creator: Iman Nikkhahazad
 Expanded Realities P6
 last change: 14-07-2022
-Topic: Script for instantiate the Cube - Prototyping area 
+Topic: Script for instantiate the Cube - Prototyping area - CAVE side
 ---------------------------------------------------------*/
 
 using UnityEngine;
@@ -25,13 +25,13 @@ public class CubeInstantiation : MonoBehaviour
 
         if (PhotonNetwork.InRoom && photonView.IsMine)
         {
-            PhotonNetwork.Instantiate("Cube", myCube.transform.position, myCube.transform.rotation);
+            PhotonNetwork.Instantiate("CAVECube", myCube.transform.position, myCube.transform.rotation);
             cubeHasSpawned = true;
             Debug.Log("Cube in multiplayer scene has instantiated");
         }
         else if (!PhotonNetwork.InRoom)
         {
-            Instantiate(Resources.Load(("Cube")), myCube.transform.position, myCube.transform.rotation);
+            Instantiate(Resources.Load(("CAVECube")), myCube.transform.position, myCube.transform.rotation);
             cubeHasSpawned = true;
             Debug.Log("Cube in singleplayer scene has instantiated");
         }
