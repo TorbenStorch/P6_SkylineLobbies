@@ -141,7 +141,7 @@ public class MainMenuManager : MonoBehaviour
 
 
 
-
+    //we dont use it anymore
     public void Refresh()
     {
         //----Sofia----//
