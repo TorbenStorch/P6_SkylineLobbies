@@ -3920,6 +3920,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 4442444363813339580}
   photonView: {fileID: 1505448830216160557}
+  mapRotationAsWell: 0
 --- !u!114 &4536827658686278123
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3984,6 +3985,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 4442444363554562457}
   photonView: {fileID: 1505448830216160557}
+  mapRotationAsWell: 0
 --- !u!114 &4536827658698479628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4164,6 +4166,7 @@ MonoBehaviour:
   stickyNotePrefab: {fileID: 8185627911387131244, guid: a52b2e17455fda04eaaf588637033a0d,
     type: 3}
   startingCanvas: {fileID: 1781390000087467882}
+  spawnPos: {fileID: 0}
 --- !u!1 &6469604456119885287
 GameObject:
   m_ObjectHideFlags: 0
@@ -6768,6 +6771,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetTransform: {fileID: 7094031310359911408}
   photonView: {fileID: 1505448830216160557}
+  mapRotationAsWell: 0
 --- !u!1 &8319394934279856739
 GameObject:
   m_ObjectHideFlags: 0

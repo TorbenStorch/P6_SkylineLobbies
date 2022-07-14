@@ -2388,11 +2388,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc3b4592a5d5fc0429790055e1c6eec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefabCAVE: {fileID: 5199993877064803903, guid: 3db54a11f4237bd4fb8611c773902d0a,
+  prefabCAVE: {fileID: 3688102439876209146, guid: 703bf883007a23941bfd106963602262,
     type: 3}
   prefabHMD: {fileID: 1327022130046451958, guid: 6b33c31e777f46d469906fb65ea57503,
     type: 3}
-  prefabCavePos: {x: 0.813, y: -1, z: -3.484}
+  prefabCavePos: {x: 0.8, y: -0.026, z: -2.89}
   prefabHmdPos: {x: 0, y: 0, z: 3.5}
   prefabCaveRot: {x: 0, y: 0, z: 0, w: 0}
   prefabHmdRot: {x: 0, y: 1, z: 0, w: -0.00000004371139}
@@ -8454,6 +8454,135 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2194850681093697330}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1001 &4021152872820078745
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 57
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.161
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -2.89
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209093, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209095, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: sceneViewId
+      value: 28
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209146, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_Name
+      value: CavePlayer_Parallex
+      objectReference: {fileID: 0}
+    - target: {fileID: 3688102439876209146, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105072683181915419, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.0588291
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105072683255396095, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.0588292
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105072683266084556, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.0588291
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105072684353583653, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.058829
+      objectReference: {fileID: 0}
+    - target: {fileID: 4105072684824924648, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.0588292
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638745921615906420, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.26470727
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638745921615906420, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.26470727
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638745921615906420, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.26470727
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638745921615906420, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7638745922025038189, guid: 703bf883007a23941bfd106963602262,
+        type: 3}
+      propertyPath: near clip plane
+      value: 1.058829
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703bf883007a23941bfd106963602262, type: 3}
 --- !u!33 &4028430109141394941
 MeshFilter:
   m_ObjectHideFlags: 0
