@@ -19,7 +19,7 @@ public class Float : MonoBehaviour
         float newY = Mathf.Sin(Time.time * speed);
         
         //set the object's Y to the new calculated Y
-        transform.localPosition = new Vector3(localPos.x, newY, localPos.z) * height;
+        transform.localPosition = new Vector3(localPos.x, newY * height, localPos.z);
     }
 
 
