@@ -20,9 +20,9 @@ public class InviteDeclineCall : MonoBehaviour
 
 	public void ShowButtons()
 	{
+		photonView.RequestOwnership();
 		if (PhotonNetwork.InRoom && photonView.IsMine)
-        {
-			photonView.RequestOwnership();
+        {	
 			photonView.RPC("ActivateButtons", RpcTarget.All);
 		}
 
@@ -41,9 +41,9 @@ public class InviteDeclineCall : MonoBehaviour
 
 	public void ShowParticleSystem()
 	{
+		photonView.RequestOwnership();
 		if (PhotonNetwork.InRoom && photonView.IsMine) 
 		{
-			photonView.RequestOwnership();
 			photonView.RPC("PlayParticleSystem", RpcTarget.All);
 		}
 
