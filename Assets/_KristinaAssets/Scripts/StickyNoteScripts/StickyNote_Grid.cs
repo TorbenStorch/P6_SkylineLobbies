@@ -28,7 +28,7 @@ public class StickyNote_Grid : MonoBehaviour
         //thisNote.transform.localPosition = newGrid.GridSnapPos(newGrid.RandomCanvasPos());
 
         Vector3 pos = newGrid.transform.position + new Vector3(0,0,gridNumber);
-        gridNumber -= thisNote.transform.localScale.z * 4.5f;
+        gridNumber -= thisNote.transform.localScale.z * 6f;
         thisNote.transform.position = pos;
         //thisNote.transform.rotation = newGrid.transform.rotation;
         thisNote.transform.rotation = Quaternion.Euler(0,0,90);
