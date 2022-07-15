@@ -774,7 +774,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3683770144075356002}
   m_Father: {fileID: 2880910481872670546}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1939,7 +1940,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3183460727333251526}
   - component: {fileID: 3183460727333251528}
-  - component: {fileID: 3183460727333251529}
   - component: {fileID: 3183460727333251521}
   - component: {fileID: 8057250004558392985}
   m_Layer: 0
@@ -1987,7 +1987,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -2007,14 +2007,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3183460727333251529
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183460727333251527}
-  m_Enabled: 0
 --- !u!114 &3183460727333251521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2028,7 +2020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931751057551323}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250004558392985
 MonoBehaviour:
@@ -2073,7 +2065,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3183460727382956573}
   - component: {fileID: 3183460727382956575}
-  - component: {fileID: 3183460727382956572}
   - component: {fileID: 3183460727382956565}
   - component: {fileID: 8057250005232118007}
   m_Layer: 0
@@ -2121,7 +2112,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -2141,14 +2132,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3183460727382956572
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183460727382956570}
-  m_Enabled: 0
 --- !u!114 &3183460727382956565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2162,7 +2145,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931752288136382}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250005232118007
 MonoBehaviour:
@@ -2207,7 +2190,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3183460727410500138}
   - component: {fileID: 3183460727410500140}
-  - component: {fileID: 3183460727410500141}
   - component: {fileID: 3183460727410500133}
   - component: {fileID: 8057250004244470904}
   m_Layer: 0
@@ -2255,7 +2237,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -2275,14 +2257,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3183460727410500141
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183460727410500139}
-  m_Enabled: 0
 --- !u!114 &3183460727410500133
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2296,7 +2270,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931751554117740}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250004244470904
 MonoBehaviour:
@@ -2341,7 +2315,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3183460727969760569}
   - component: {fileID: 3183460727969760571}
-  - component: {fileID: 3183460727969760568}
   - component: {fileID: 3183460727969760561}
   - component: {fileID: 8057250005228318939}
   m_Layer: 0
@@ -2389,7 +2362,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -2409,14 +2382,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3183460727969760568
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183460727969760566}
-  m_Enabled: 0
 --- !u!114 &3183460727969760561
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2430,7 +2395,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931751858647861}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250005228318939
 MonoBehaviour:
@@ -2475,7 +2440,6 @@ GameObject:
   m_Component:
   - component: {fileID: 3183460728575143668}
   - component: {fileID: 3183460728575143670}
-  - component: {fileID: 3183460728575143671}
   - component: {fileID: 3183460728575143665}
   - component: {fileID: 8057250004202431295}
   m_Layer: 0
@@ -2523,7 +2487,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -2543,14 +2507,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &3183460728575143671
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3183460728575143669}
-  m_Enabled: 0
 --- !u!114 &3183460728575143665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2564,7 +2520,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931751941736935}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250004202431295
 MonoBehaviour:
@@ -2799,7 +2755,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3683770143916950712
 Transform:
   m_ObjectHideFlags: 0
@@ -2811,8 +2767,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 3683770144075356002}
+  m_Children: []
   m_Father: {fileID: 2880910481872670546}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3127,7 +3082,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3683770143960871355
 Transform:
   m_ObjectHideFlags: 0
@@ -3462,12 +3417,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3683770144075356001}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.0436, y: -0.0327, z: -0.1488}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.0436, y: -0.032700002, z: -0.1488}
   m_LocalScale: {x: 0.014074294, y: 0.014074294, z: 0.014074294}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3683770143916950712}
+  m_Father: {fileID: 1061119917660043653}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &3683770144075356029
@@ -7530,7 +7485,6 @@ GameObject:
   m_Component:
   - component: {fileID: 9139931751255733692}
   - component: {fileID: 9139931751255733694}
-  - component: {fileID: 9139931751255733695}
   - component: {fileID: 9139931751255733689}
   - component: {fileID: 8057250005549703649}
   m_Layer: 0
@@ -7578,7 +7532,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 1.31012
+  near clip plane: 0.01
   far clip plane: 100
   field of view: 60
   orthographic: 0
@@ -7598,14 +7552,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &9139931751255733695
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9139931751255733693}
-  m_Enabled: 0
 --- !u!114 &9139931751255733689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7619,7 +7565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ProjectionScreen: {fileID: 9139931751287576902}
-  ClampNearPlane: 1
+  ClampNearPlane: 0
   DrawGizmos: 1
 --- !u!114 &8057250005549703649
 MonoBehaviour:
