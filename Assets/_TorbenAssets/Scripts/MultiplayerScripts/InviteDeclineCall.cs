@@ -1,3 +1,9 @@
+/*-------------------------------------------------------
+Creator: Torben Storch
+Expanded Realities P6
+last change: 15-07-2022
+Topic: Script to Spawn Buttons & PS
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -15,7 +21,11 @@ public class InviteDeclineCall : MonoBehaviour
 	public void ShowButtons()
 	{
 		if (PhotonNetwork.InRoom && photonView.IsMine)
+        {
+			photonView.RequestOwnership();
 			photonView.RPC("ActivateButtons", RpcTarget.All);
+		}
+
 		else if (!PhotonNetwork.InRoom)
 			ActivateButtons();
 	}
@@ -31,8 +41,12 @@ public class InviteDeclineCall : MonoBehaviour
 
 	public void ShowParticleSystem()
 	{
-		if (PhotonNetwork.InRoom && photonView.IsMine)
+		if (PhotonNetwork.InRoom && photonView.IsMine) 
+		{
+			photonView.RequestOwnership();
 			photonView.RPC("PlayParticleSystem", RpcTarget.All);
+		}
+
 		else if (!PhotonNetwork.InRoom)
 			PlayParticleSystem();
 	}
