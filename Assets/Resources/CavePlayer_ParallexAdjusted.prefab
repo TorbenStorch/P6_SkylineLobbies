@@ -1726,12 +1726,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   photonView: {fileID: 2880910481965448468}
   deactivateObjects:
-  - {fileID: 0}
-  - {fileID: 1061119917516593569}
-  - {fileID: 1061119917660043674}
+  - {fileID: 3183460726573278002}
+  - {fileID: 9139931750842765988}
   - {fileID: 3683770143960871354}
   - {fileID: 3683770143916950717}
-  - {fileID: 0}
+  - {fileID: 1061119917516593569}
+  - {fileID: 1061119917660043674}
   cameraToTurnOff: {fileID: 0}
   audioListenerToTurnOff: {fileID: 0}
   deactavateXROrigin: 0
@@ -7075,9 +7075,9 @@ MonoBehaviour:
   rightUp: {fileID: 8057250005798609299}
   rightDown: {fileID: 8057250004998724413}
   targets:
-  - {fileID: 3683770143960871354}
-  - {fileID: 3683770143916950717}
-  - {fileID: 0}
+  - {fileID: 1061119917516593569}
+  - {fileID: 1061119917660043674}
+  - {fileID: 3183460726573278002}
 --- !u!1 &8057250005676612117
 GameObject:
   m_ObjectHideFlags: 0
