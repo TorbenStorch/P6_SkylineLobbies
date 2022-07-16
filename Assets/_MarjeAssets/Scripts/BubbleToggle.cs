@@ -65,11 +65,11 @@ public class BubbleToggle : MonoBehaviour
 
     private void Toggle1(InputAction.CallbackContext context)
     {
-        bool isActive = !InfoBubble1.activeSelf;
-        InfoBubble1.SetActive(isActive);
+        bool isActive = !Paper1.activeSelf;
+        Paper1.SetActive(isActive);
         Debug.Log("BubbleToggle");
 
-        Paper1.transform.position = InfoBubble1.transform.position;
+        InfoBubble1.transform.position = Paper1.transform.position;
         //gameObject.SetActive(true);
         //InfoBubble1.SetActive(false);
         //this.transform.position = new Vector3(0, 0, 0); //not even a toggle anymore but I gave up to do it the complicated way
@@ -77,21 +77,21 @@ public class BubbleToggle : MonoBehaviour
 
     private void Toggle2(InputAction.CallbackContext context)
     {
-        bool isActive = !InfoBubble2.activeSelf;
-        InfoBubble2.SetActive(isActive);
+        bool isActive = !Paper2.activeSelf;
+        Paper2.SetActive(isActive);
         Debug.Log("BubbleToggle");
 
-        Paper2.transform.position = InfoBubble2.transform.position;
+        InfoBubble2.transform.position = Paper2.transform.position;
           
     }
 
     private void Toggle3(InputAction.CallbackContext context)
     {
-        bool isActive = !InfoBubble3.activeSelf;
-        InfoBubble3.SetActive(isActive);
+        bool isActive = !Paper3.activeSelf;
+        Paper3.SetActive(isActive);
         Debug.Log("BubbleToggle");
 
-        Paper3.transform.position = InfoBubble3.transform.position;
+        InfoBubble3.transform.position = Paper3.transform.position;
 
     }
 }
