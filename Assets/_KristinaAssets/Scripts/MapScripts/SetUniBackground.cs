@@ -1,3 +1,8 @@
+/*-------------------------------------------------------
+Creator: Kristina Koseva
+Expanded Realities P6
+last change: 17-07-2022
+---------------------------------------------------------*/
 using UnityEngine;
 
 public class SetUniBackground : MonoBehaviour

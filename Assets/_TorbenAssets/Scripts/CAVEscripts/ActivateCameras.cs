@@ -1,4 +1,9 @@
-﻿using System.Collections;
+﻿/*-------------------------------------------------------
+Creator: Code from Prof. Grimm - Implemented by Torben Storch
+Expanded Realities P6
+last change: 02-06-2022
+---------------------------------------------------------*/
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 

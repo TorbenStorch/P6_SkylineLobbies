@@ -1,8 +1,8 @@
 /*-------------------------------------------------------
-Creator: https://www.youtube.com/watch?v=q1HuVUdq9ps edited by Torben Storch
+Creator: Torben Storch (edited from https://www.youtube.com/watch?v=q1HuVUdq9ps)
 Expanded Realities P6
 last change: 21-06-2022
-Topic: Teleportation Locomotion Script v02 - can now fit for both hands
+Topic: Teleportation Locomotion Script
 ---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;

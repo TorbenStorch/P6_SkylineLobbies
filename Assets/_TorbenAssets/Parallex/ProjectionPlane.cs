@@ -1,3 +1,8 @@
+/*-------------------------------------------------------
+Creator: Code from Alex Zarenko (Group 2) - Implemented/Adjusted by Torben Storch
+Expanded Realities P6
+last change: 14-07-2022
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
