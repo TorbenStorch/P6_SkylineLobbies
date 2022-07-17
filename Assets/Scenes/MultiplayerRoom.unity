@@ -16439,12 +16439,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 1245454343918455483}
-  Infobubble2: {fileID: 3982593492910901812}
-  Infobubble3: {fileID: 4623154618051900239}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  Infobubble1: {fileID: 6872113376071785297}
+  Infobubble2: {fileID: 6872113376096747678}
+  Infobubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
 --- !u!1 &638510488383475382
 GameObject:
   m_ObjectHideFlags: 0
@@ -19299,9 +19299,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!33 &1725118780606482622
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -20387,12 +20387,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
-  InfoBubble1: {fileID: 1245454343918455483}
-  InfoBubble2: {fileID: 3982593492910901812}
-  InfoBubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!23 &2131042713174093123
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -27106,9 +27106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!23 &4466622185699108074
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -32365,9 +32365,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!33 &6164382123525485490
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -32875,12 +32875,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
-  InfoBubble1: {fileID: 1245454343918455483}
-  InfoBubble2: {fileID: 3982593492910901812}
-  InfoBubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!1 &6332646985743888371
 GameObject:
   m_ObjectHideFlags: 0
@@ -35870,8 +35870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 160, y: 109.8}
+  m_AnchoredPosition: {x: 0, y: 15}
+  m_SizeDelta: {x: 142.75, y: 54.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6872113376275826778
 CanvasRenderer:
@@ -35894,14 +35894,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0.94688267, b: 0.5226415, a: 1}
+  m_Color: {r: 1, g: 1, b: 0.43137258, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: c222cd02c447941edb09ecb6433229ce, type: 3}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -36061,15 +36061,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 50ca11deac985c04aaad93bd03c4159b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Bubble: {fileID: 1245454343918455483}
-  Bubble2: {fileID: 3982593492910901812}
-  Bubble3: {fileID: 4623154618051900239}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
   Ball: {fileID: 6872113376967840992}
   Ball2: {fileID: 6872113377282417231}
   Ball3: {fileID: 6872113375597924176}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
   BallBowl: {fileID: 494446004}
   bubblePosition: 0.2
 --- !u!4 &6872113376570751783
@@ -36291,8 +36291,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281940431
-  m_fontColor: {r: 0.8117648, g: 0.22352943, b: 0.22352943, a: 1}
+    rgba: 4285988863
+  m_fontColor: {r: 1, g: 1, b: 0.46274513, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -36309,8 +36309,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 30.4
+  m_fontSizeBase: 30.4
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -40448,12 +40448,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: 5125711520175466255, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
-  InfoBubble1: {fileID: 1245454343918455483}
-  InfoBubble2: {fileID: 3982593492910901812}
-  InfoBubble3: {fileID: 4623154618051900239}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
+  InfoBubble1: {fileID: 6872113376071785297}
+  InfoBubble2: {fileID: 6872113376096747678}
+  InfoBubble3: {fileID: 6872113376812059996}
 --- !u!4 &7919038713548189365
 Transform:
   m_ObjectHideFlags: 0
@@ -42271,12 +42271,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 1245454343918455483}
-  Infobubble2: {fileID: 3982593492910901812}
-  Infobubble3: {fileID: 4623154618051900239}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  Infobubble1: {fileID: 6872113376071785297}
+  Infobubble2: {fileID: 6872113376096747678}
+  Infobubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
 --- !u!1 &8577108186613231236
 GameObject:
   m_ObjectHideFlags: 0
@@ -43629,12 +43629,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   toggleReference: {fileID: -7772452966058768852, guid: c348712bda248c246b8c49b3db54643f,
     type: 3}
-  Infobubble1: {fileID: 1245454343918455483}
-  Infobubble2: {fileID: 3982593492910901812}
-  Infobubble3: {fileID: 4623154618051900239}
-  Paper1: {fileID: 6872113376071785297}
-  Paper2: {fileID: 6872113376096747678}
-  Paper3: {fileID: 6872113376812059996}
+  Infobubble1: {fileID: 6872113376071785297}
+  Infobubble2: {fileID: 6872113376096747678}
+  Infobubble3: {fileID: 6872113376812059996}
+  Paper1: {fileID: 1245454343918455483}
+  Paper2: {fileID: 3982593492910901812}
+  Paper3: {fileID: 4623154618051900239}
 --- !u!23 &8952917346241332125
 MeshRenderer:
   m_ObjectHideFlags: 0

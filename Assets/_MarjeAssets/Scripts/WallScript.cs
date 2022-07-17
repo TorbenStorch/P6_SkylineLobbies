@@ -13,9 +13,9 @@ using UnityEngine;
 public class WallScript : MonoBehaviour
 {
 
-    public GameObject Bubble;
-    public GameObject Bubble2;
-    public GameObject Bubble3;
+    public GameObject InfoBubble1;
+    public GameObject InfoBubble2;
+    public GameObject InfoBubble3;
     public GameObject Ball;
     public GameObject Ball2;
     public GameObject Ball3;
@@ -23,7 +23,7 @@ public class WallScript : MonoBehaviour
     public GameObject Paper2;
     public GameObject Paper3;
     public GameObject BallBowl;
-    public float bubblePosition = -0.5f;
+    public float PaperPosition = 0.2f;
     
 
     ////vectors for the Bubbles to respawn to
@@ -40,18 +40,18 @@ public class WallScript : MonoBehaviour
     //private float Bubble3Z = /*-0.84f*/6.5f;
     //no more magic numbers :D
 
-    private float Paper1XPosition;
+    private float InfoBubble1XPosition;
     
     // Start is called before the first frame update
     void Start()
     {
-        Paper1XPosition = Paper1.transform.position.x;
+        InfoBubble1XPosition = InfoBubble1.transform.position.x;
     }
 
     // Update is called once per frame
     void Update()
     {
-        Paper1.transform.position = new Vector3(Paper1XPosition, Paper1.transform.position.y, Paper1.transform.position.z);
+        InfoBubble1.transform.position = new Vector3(InfoBubble1XPosition, InfoBubble1.transform.position.y, InfoBubble1.transform.position.z);
     }
 
     void OnCollisionEnter(Collision collision)
@@ -65,11 +65,11 @@ public class WallScript : MonoBehaviour
 
             
             
-            Bubble.SetActive(true);
-            Bubble.transform.position = Ball.transform.position + /*Vector3.forward*/ new Vector3/*(0,0,bubblePosition)*/ (0, 0, bubblePosition);
+            Paper1.SetActive(true);
+            Paper1.transform.position = Ball.transform.position + /*Vector3.forward*/ new Vector3/*(0,0,bubblePosition)*/ (0, 0, PaperPosition);
             Debug.Log("Bubbleactive"); //inactive part when outside doesn't work yet (and also doesn't make sense since its reversed)
 
-            Paper1.transform.position = Ball.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
+            InfoBubble1.transform.position = Ball.transform.position + /*Vector3.forward*/ new Vector3(0, 0, PaperPosition);
             //else
             //{
             //    //bubble coordinates == ball y&x coordinates
@@ -99,11 +99,11 @@ public class WallScript : MonoBehaviour
 
 
 
-                Bubble2.SetActive(true);
-                Bubble2.transform.position = Ball2.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
+                Paper2.SetActive(true);
+                Paper2.transform.position = Ball2.transform.position + /*Vector3.forward*/ new Vector3(0, 0, PaperPosition);
             Debug.Log("Bubbleactive");
 
-                Paper2.transform.position = Ball2.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
+            InfoBubble2.transform.position = Ball2.transform.position + /*Vector3.forward*/ new Vector3(0, 0, PaperPosition);
         }
 
         if (collision.gameObject.tag == "Ball3")
@@ -115,16 +115,15 @@ public class WallScript : MonoBehaviour
 
 
 
-            Bubble3.SetActive(true);
-            Bubble3.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
+            Paper3.SetActive(true);
+            Paper3.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, PaperPosition); 
             Debug.Log("Bubbleactive");
 
             //Paper.SetActive(true);
-            Paper3.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, bubblePosition);
+            InfoBubble3.transform.position = Ball3.transform.position + /*Vector3.forward*/ new Vector3(0, 0, PaperPosition);
         }
 
-        //------------------------------------------------------------------------
-        //other balls
+        
 
 
     }
@@ -134,10 +133,10 @@ public class WallScript : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bubble")
         {
-            
-            Bubble.SetActive(false);
-            Debug.Log("Bubbleinactive"); //inactive part when outside doesn't work yet (and also doesn't make sense since its reversed)
+
             Paper1.SetActive(false);
+            Debug.Log("Bubbleinactive"); //inactive part when outside doesn't work yet (and also doesn't make sense since its reversed)
+            InfoBubble1.SetActive(false);
             Ball.SetActive(true);
             //Ball.transform.position = new Vector3(BubbleX, Bubble123Y, BubbleZ); //just set it far away from collider (mebi back to table)
             Ball.transform.position = BallBowl.transform.position + new Vector3(0, 0.5f, 0); //0.2 because height has to be different if they all respawn at once
@@ -148,8 +147,8 @@ public class WallScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Bubble2")
         {
-            Bubble2.SetActive(false);
             Paper2.SetActive(false);
+            InfoBubble2.SetActive(false);
             Ball2.SetActive(true);
             //Ball2.transform.position = new Vector3(Bubble2X, Bubble123Y, Bubble2Z);
             Ball2.transform.position = BallBowl.transform.position + new Vector3(0, 1f, 0);
@@ -159,8 +158,8 @@ public class WallScript : MonoBehaviour
 
         if (collision.gameObject.tag == "Bubble3")
         {
-            Bubble3.SetActive(false);
             Paper3.SetActive(false);
+            InfoBubble3.SetActive(false);
             Ball3.SetActive(true);
             //Ball3.transform.position = new Vector3(Bubble3X, Bubble123Y, Bubble3Z);
             Ball3.transform.position = BallBowl.transform.position + new Vector3(0, 1.5f, 0);

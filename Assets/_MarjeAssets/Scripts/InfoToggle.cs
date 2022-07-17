@@ -17,9 +17,9 @@ public class InfoToggle : MonoBehaviour
 {
     public InputActionReference toggleReference = null;
 
-    public GameObject Paper1;
-    public GameObject Paper2;
-    public GameObject Paper3;
+    public GameObject InfoBubble1;
+    public GameObject InfoBubble2;
+    public GameObject InfoBubble3;
     //public GameObject InfoBubble1;
 
 
@@ -47,8 +47,8 @@ public class InfoToggle : MonoBehaviour
 
     private void Toggle1(InputAction.CallbackContext context)
     {
-        bool isActive = !Paper1.activeSelf;
-        Paper1.SetActive(isActive);
+        bool isActive = !InfoBubble1.activeSelf;
+        InfoBubble1.SetActive(isActive);
         Debug.Log("TogglePaper");
 
         //InfoBubble1.transform.position = Paper.transform.position;
@@ -57,8 +57,8 @@ public class InfoToggle : MonoBehaviour
 
     private void Toggle2(InputAction.CallbackContext context)
     {
-        bool isActive = !Paper2.activeSelf;
-        Paper2.SetActive(isActive);
+        bool isActive = !InfoBubble2.activeSelf;
+        InfoBubble2.SetActive(isActive);
         Debug.Log("TogglePaper");
 
         //InfoBubble1.transform.position = Paper.transform.position;
@@ -67,8 +67,8 @@ public class InfoToggle : MonoBehaviour
 
     private void Toggle3(InputAction.CallbackContext context)
     {
-        bool isActive = !Paper3.activeSelf;
-        Paper3.SetActive(isActive);
+        bool isActive = !InfoBubble3.activeSelf;
+        InfoBubble3.SetActive(isActive);
         Debug.Log("TogglePaper");
 
         //InfoBubble1.transform.position = Paper.transform.position;
