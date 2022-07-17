@@ -1644,7 +1644,7 @@ GameObject:
   - component: {fileID: 2880910481965448471}
   - component: {fileID: 4519212086771536287}
   m_Layer: 0
-  m_Name: CavePlayer_ParallexAdjusted
+  m_Name: CavePlayer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -1,3 +1,9 @@
+/*-------------------------------------------------------
+Creator: Kristina Koseva - adjusted by Torben Storch (changed from Canvas-Image to 3D-GameObject/prefab)
+Expanded Realities P6
+last change: 17-07-2022
+Topic: Script to place the StickyNote onto a grid 
+---------------------------------------------------------*/
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -18,7 +24,7 @@ public class StickyNote_Grid : MonoBehaviour
         }
     }
 
-    public void PlaceThisOnGrid()
+    public void PlaceThisOnGrid()// adjusted by T.S. 
     {
 
         _start = true;
@@ -27,6 +33,9 @@ public class StickyNote_Grid : MonoBehaviour
 
         //thisNote.transform.localPosition = newGrid.GridSnapPos(newGrid.RandomCanvasPos());
 
+
+
+        // adjusted by T.S. (placed the sticky note prefabs on a set position and move it back each time a new one comes)
         Vector3 pos = newGrid.transform.position + new Vector3(0,0,gridNumber);
         gridNumber -= thisNote.transform.localScale.z * 6f;
         thisNote.transform.position = pos;
